@@ -7659,30 +7659,30 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-8.89" y1="-16.51" x2="8.89" y2="-16.51" width="0.127" layer="51"/>
 <wire x1="8.89" y1="-16.51" x2="8.89" y2="16.51" width="0.127" layer="51"/>
 <wire x1="8.89" y1="16.51" x2="-8.89" y2="16.51" width="0.127" layer="51"/>
-<pad name="1" x="-7.62" y="12.7" drill="1.016" diameter="1.8796"/>
-<pad name="2" x="-7.62" y="10.16" drill="1.016" diameter="1.8796"/>
-<pad name="3" x="-7.62" y="7.62" drill="1.016" diameter="1.8796"/>
-<pad name="4" x="-7.62" y="5.08" drill="1.016" diameter="1.8796"/>
-<pad name="5" x="-7.62" y="2.54" drill="1.016" diameter="1.8796"/>
-<pad name="6" x="-7.62" y="0" drill="1.016" diameter="1.8796"/>
-<pad name="7" x="-7.62" y="-2.54" drill="1.016" diameter="1.8796"/>
-<pad name="8" x="-7.62" y="-5.08" drill="1.016" diameter="1.8796"/>
-<pad name="9" x="-7.62" y="-7.62" drill="1.016" diameter="1.8796"/>
-<pad name="10" x="-7.62" y="-10.16" drill="1.016" diameter="1.8796"/>
-<pad name="11" x="-7.62" y="-12.7" drill="1.016" diameter="1.8796"/>
-<pad name="12" x="-7.62" y="-15.24" drill="1.016" diameter="1.8796"/>
-<pad name="13" x="7.62" y="-15.24" drill="1.016" diameter="1.8796"/>
-<pad name="14" x="7.62" y="-12.7" drill="1.016" diameter="1.8796"/>
-<pad name="15" x="7.62" y="-10.16" drill="1.016" diameter="1.8796"/>
-<pad name="16" x="7.62" y="-7.62" drill="1.016" diameter="1.8796"/>
-<pad name="17" x="7.62" y="-5.08" drill="1.016" diameter="1.8796"/>
-<pad name="18" x="7.62" y="-2.54" drill="1.016" diameter="1.8796"/>
-<pad name="19" x="7.62" y="0" drill="1.016" diameter="1.8796"/>
-<pad name="20" x="7.62" y="2.54" drill="1.016" diameter="1.8796"/>
-<pad name="21" x="7.62" y="5.08" drill="1.016" diameter="1.8796"/>
-<pad name="22" x="7.62" y="7.62" drill="1.016" diameter="1.8796"/>
-<pad name="23" x="7.62" y="10.16" drill="1.016" diameter="1.8796"/>
-<pad name="24" x="7.62" y="12.7" drill="1.016" diameter="1.8796"/>
+<pad name="1" x="-7.62" y="12.7" drill="1" shape="long"/>
+<pad name="2" x="-7.62" y="10.16" drill="1" shape="long"/>
+<pad name="3" x="-7.62" y="7.62" drill="1" shape="long"/>
+<pad name="4" x="-7.62" y="5.08" drill="1" shape="long"/>
+<pad name="5" x="-7.62" y="2.54" drill="1" shape="long"/>
+<pad name="6" x="-7.62" y="0" drill="1" shape="long"/>
+<pad name="7" x="-7.62" y="-2.54" drill="1" shape="long"/>
+<pad name="8" x="-7.62" y="-5.08" drill="1" shape="long"/>
+<pad name="9" x="-7.62" y="-7.62" drill="1" shape="long"/>
+<pad name="10" x="-7.62" y="-10.16" drill="1" shape="long"/>
+<pad name="11" x="-7.62" y="-12.7" drill="1" shape="long"/>
+<pad name="12" x="-7.62" y="-15.24" drill="1" shape="long"/>
+<pad name="13" x="7.62" y="-15.24" drill="1" shape="long"/>
+<pad name="14" x="7.62" y="-12.7" drill="1" shape="long"/>
+<pad name="15" x="7.62" y="-10.16" drill="1" shape="long"/>
+<pad name="16" x="7.62" y="-7.62" drill="1" shape="long"/>
+<pad name="17" x="7.62" y="-5.08" drill="1" shape="long"/>
+<pad name="18" x="7.62" y="-2.54" drill="1" shape="long"/>
+<pad name="19" x="7.62" y="0" drill="1" shape="long"/>
+<pad name="20" x="7.62" y="2.54" drill="1" shape="long"/>
+<pad name="21" x="7.62" y="5.08" drill="1" shape="long"/>
+<pad name="22" x="7.62" y="7.62" drill="1" shape="long"/>
+<pad name="23" x="7.62" y="10.16" drill="1" shape="long"/>
+<pad name="24" x="7.62" y="12.7" drill="1" shape="long"/>
 <text x="0" y="18.034" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-16.764" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
 <wire x1="-3.81" y1="16.51" x2="-3.81" y2="17.78" width="0.127" layer="51"/>
