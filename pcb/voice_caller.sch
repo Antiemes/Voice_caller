@@ -186,6 +186,12 @@
 <text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="+5V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
+<symbol name="+3V3">
+<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="+3V3" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="VCC" prefix="P+">
@@ -218,6 +224,19 @@
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="+5V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="+3V3" prefix="+3V3">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="+3V3" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -9615,24 +9634,27 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="R7" library="rcl" deviceset="R-EU_" device="M1206" value="1k"/>
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
+<part name="C7" library="rcl" deviceset="C-EU" device="C1206K"/>
+<part name="GND11" library="supply1" deviceset="GND" device=""/>
+<part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="+8V" gate="VCC" x="25.4" y="99.06"/>
-<instance part="GND1" gate="1" x="25.4" y="81.28"/>
+<instance part="+8V" gate="VCC" x="147.32" y="149.86"/>
+<instance part="GND1" gate="1" x="147.32" y="132.08"/>
 <instance part="CONN_MIC" gate="G$1" x="-30.48" y="50.8" rot="MR0"/>
 <instance part="CONN_RADIO" gate="G$1" x="2.54" y="50.8"/>
-<instance part="P+2" gate="1" x="40.64" y="99.06"/>
-<instance part="GND2" gate="1" x="40.64" y="81.28"/>
-<instance part="C1" gate="G$1" x="25.4" y="91.44"/>
-<instance part="C2" gate="G$1" x="40.64" y="91.44"/>
+<instance part="P+2" gate="1" x="78.74" y="157.48"/>
+<instance part="GND2" gate="1" x="78.74" y="139.7"/>
+<instance part="C1" gate="G$1" x="147.32" y="142.24"/>
+<instance part="C2" gate="G$1" x="78.74" y="149.86"/>
 <instance part="IC2" gate="G$1" x="157.48" y="68.58"/>
-<instance part="C3" gate="G$1" x="48.26" y="91.44"/>
-<instance part="P+1" gate="1" x="48.26" y="99.06"/>
-<instance part="GND3" gate="1" x="48.26" y="81.28"/>
+<instance part="C3" gate="G$1" x="167.64" y="142.24"/>
+<instance part="P+1" gate="1" x="167.64" y="149.86"/>
+<instance part="GND3" gate="1" x="167.64" y="132.08"/>
 <instance part="IC3" gate="G$1" x="154.94" y="119.38"/>
 <instance part="R1" gate="G$1" x="-15.24" y="99.06"/>
 <instance part="R2" gate="G$1" x="-15.24" y="88.9"/>
@@ -9659,6 +9681,9 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <instance part="GND10" gate="1" x="93.98" y="43.18"/>
 <instance part="R7" gate="G$1" x="81.28" y="53.34"/>
 <instance part="P+3" gate="1" x="93.98" y="76.2"/>
+<instance part="C7" gate="G$1" x="190.5" y="68.58"/>
+<instance part="GND11" gate="1" x="190.5" y="58.42"/>
+<instance part="+3V1" gate="G$1" x="190.5" y="76.2"/>
 </instances>
 <busses>
 </busses>
@@ -9667,12 +9692,12 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <segment>
 <pinref part="P+2" gate="1" pin="+5V"/>
 <pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="40.64" y1="93.98" x2="40.64" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="152.4" x2="78.74" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C3" gate="G$1" pin="1"/>
 <pinref part="P+1" gate="1" pin="+5V"/>
-<wire x1="48.26" y1="96.52" x2="48.26" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="147.32" x2="167.64" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC3" gate="G$1" pin="VOUT"/>
@@ -9694,12 +9719,12 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
 <pinref part="C1" gate="G$1" pin="2"/>
-<wire x1="25.4" y1="83.82" x2="25.4" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="134.62" x2="147.32" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
 <pinref part="C2" gate="G$1" pin="2"/>
-<wire x1="40.64" y1="83.82" x2="40.64" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="142.24" x2="78.74" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="G$1" pin="GND"/>
@@ -9709,7 +9734,7 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <segment>
 <pinref part="C3" gate="G$1" pin="2"/>
 <pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="48.26" y1="83.82" x2="48.26" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="134.62" x2="167.64" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="CONN_MIC" gate="G$1" pin="7"/>
@@ -9786,6 +9811,11 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <pinref part="T1" gate="G$1" pin="E"/>
 <pinref part="GND10" gate="1" pin="GND"/>
 <wire x1="93.98" y1="45.72" x2="93.98" y2="48.26" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND11" gate="1" pin="GND"/>
+<pinref part="C7" gate="G$1" pin="2"/>
+<wire x1="190.5" y1="60.96" x2="190.5" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -9866,7 +9896,7 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <segment>
 <pinref part="+8V" gate="VCC" pin="VCC"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="25.4" y1="93.98" x2="25.4" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="144.78" x2="147.32" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FREQ_UD" class="0">
@@ -10038,6 +10068,11 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <pinref part="IC2" gate="G$1" pin="VCC"/>
 <wire x1="172.72" y1="66.04" x2="175.26" y2="66.04" width="0.1524" layer="91"/>
 <label x="175.26" y="66.04" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="C7" gate="G$1" pin="1"/>
+<wire x1="190.5" y1="71.12" x2="190.5" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
 </segment>
 </net>
 <net name="N$4" class="0">
