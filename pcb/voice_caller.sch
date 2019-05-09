@@ -7927,62 +7927,107 @@ You are welcome to use this library for commercial purposes. For attribution, we
 &lt;/ul&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
-<package name="G6J-2P-Y">
-<description>&lt;b&gt;Signal Relay - G6J-Y&lt;/b&gt; 5.7 x 10.6 x 9 mm&lt;p&gt;
-Source: http://www.omroncomponents.eu/ .. K125-E2-02-X.pdf</description>
-<wire x1="-4.6" y1="-2.75" x2="5.8" y2="-2.75" width="0.2032" layer="21"/>
-<wire x1="5.8" y1="-2.75" x2="5.8" y2="2.75" width="0.2032" layer="21"/>
-<wire x1="5.8" y1="2.75" x2="-4.6" y2="2.75" width="0.2032" layer="21"/>
-<wire x1="-4.6" y1="2.75" x2="-4.6" y2="-2.75" width="0.2032" layer="21"/>
-<wire x1="-3.81" y1="0.635" x2="-3.81" y2="-0.635" width="0.508" layer="21"/>
-<pad name="1" x="-3.2" y="-1.6" drill="0.9" diameter="1.5"/>
-<pad name="2" x="0" y="-1.6" drill="0.9" diameter="1.5"/>
-<pad name="3" x="2.2" y="-1.6" drill="0.9" diameter="1.5"/>
-<pad name="4" x="4.4" y="-1.6" drill="0.9" diameter="1.5"/>
-<pad name="5" x="4.4" y="1.6" drill="0.9" diameter="1.5"/>
-<pad name="6" x="2.2" y="1.6" drill="0.9" diameter="1.5"/>
-<pad name="7" x="0" y="1.6" drill="0.9" diameter="1.5"/>
-<pad name="8" x="-3.2" y="1.6" drill="0.9" diameter="1.5"/>
-<text x="-4.445" y="3.175" size="1.27" layer="25">&gt;NAME</text>
-<text x="-4.445" y="-4.445" size="1.27" layer="27">&gt;VALUE</text>
+<package name="TQ2">
+<description>&lt;b&gt;LOW PROFILE 2 FORM C RELAY&lt;/b&gt; NAiS&lt;p&gt;
+Source: http://www.mew-europe.com/..  en_ds_61020_0001.pdf</description>
+<wire x1="-6.9" y1="4.4" x2="6.9" y2="4.4" width="0.2032" layer="51"/>
+<wire x1="6.9" y1="4.4" x2="6.9" y2="-4.4" width="0.2032" layer="21"/>
+<wire x1="6.9" y1="-4.4" x2="-6.9" y2="-4.4" width="0.2032" layer="51"/>
+<wire x1="-6.9" y1="-4.4" x2="-6.9" y2="4.4" width="0.2032" layer="21"/>
+<wire x1="-6.9" y1="4.4" x2="-5.8" y2="4.4" width="0.2032" layer="21"/>
+<wire x1="6.9" y1="-4.4" x2="5.8" y2="-4.4" width="0.2032" layer="21"/>
+<wire x1="5.8" y1="4.4" x2="6.9" y2="4.4" width="0.2032" layer="21"/>
+<wire x1="-5.8" y1="-4.4" x2="-6.9" y2="-4.4" width="0.2032" layer="21"/>
+<pad name="1" x="-5.08" y="-3.81" drill="1"/>
+<pad name="2" x="-2.54" y="-3.81" drill="1"/>
+<pad name="3" x="0" y="-3.81" drill="1"/>
+<pad name="4" x="2.54" y="-3.81" drill="1"/>
+<pad name="5" x="5.08" y="-3.81" drill="1"/>
+<pad name="6" x="5.08" y="3.81" drill="1"/>
+<pad name="7" x="2.54" y="3.81" drill="1"/>
+<pad name="8" x="0" y="3.81" drill="1"/>
+<pad name="9" x="-2.54" y="3.81" drill="1"/>
+<pad name="10" x="-5.08" y="3.81" drill="1"/>
+<text x="-3.81" y="1.27" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.81" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-6.35" y1="-2.54" x2="-5.715" y2="2.54" layer="21"/>
 </package>
-<package name="G6J-2FS-Y">
-<description>&lt;b&gt;Signal Relay - G6J-Y&lt;/b&gt; 5.7 x 10.6 x 9 mm&lt;p&gt;
-Source: http://www.omroncomponents.eu/ .. K125-E2-02-X.pdf</description>
-<wire x1="-4.6" y1="-2.75" x2="5.8" y2="-2.75" width="0.2032" layer="51"/>
-<wire x1="5.8" y1="-2.75" x2="5.8" y2="2.75" width="0.2032" layer="21"/>
-<wire x1="5.8" y1="2.75" x2="-4.6" y2="2.75" width="0.2032" layer="51"/>
-<wire x1="-4.6" y1="2.75" x2="-4.6" y2="-2.75" width="0.2032" layer="21"/>
-<wire x1="-3.81" y1="0.635" x2="-3.81" y2="-0.635" width="0.508" layer="21"/>
-<smd name="1" x="-3.2" y="-2.175" dx="0.8" dy="2.35" layer="1"/>
-<smd name="2" x="0" y="-2.175" dx="0.8" dy="2.35" layer="1"/>
-<smd name="3" x="2.2" y="-2.175" dx="0.8" dy="2.35" layer="1"/>
-<smd name="4" x="4.4" y="-2.175" dx="0.8" dy="2.35" layer="1"/>
-<smd name="5" x="4.4" y="2.175" dx="0.8" dy="2.35" layer="1"/>
-<smd name="6" x="2.2" y="2.175" dx="0.8" dy="2.35" layer="1"/>
-<smd name="7" x="0" y="2.175" dx="0.8" dy="2.35" layer="1"/>
-<smd name="8" x="-3.2" y="2.175" dx="0.8" dy="2.35" layer="1"/>
-<text x="-4.445" y="3.175" size="1.27" layer="25">&gt;NAME</text>
-<text x="-4.445" y="-4.445" size="1.27" layer="27">&gt;VALUE</text>
+<package name="TQ-SA">
+<description>&lt;b&gt;LOW-PROFILE TQ-SMD RELAYS&lt;/b&gt; NAiS&lt;p&gt;
+Source: http://www.mew-europe.com/..  en_ds_61021_0004.pdf</description>
+<wire x1="-6.9" y1="4.4" x2="6.9" y2="4.4" width="0.2032" layer="51"/>
+<wire x1="6.9" y1="4.4" x2="6.9" y2="-4.4" width="0.2032" layer="21"/>
+<wire x1="6.9" y1="-4.4" x2="-6.9" y2="-4.4" width="0.2032" layer="51"/>
+<wire x1="-6.9" y1="-4.4" x2="-6.9" y2="4.4" width="0.2032" layer="21"/>
+<wire x1="-6.9" y1="4.4" x2="-6.1" y2="4.4" width="0.2032" layer="21"/>
+<wire x1="-6.1" y1="-4.4" x2="-6.9" y2="-4.4" width="0.2032" layer="21"/>
+<wire x1="6.1" y1="4.4" x2="6.9" y2="4.4" width="0.2032" layer="21"/>
+<wire x1="6.9" y1="-4.4" x2="6.1" y2="-4.4" width="0.2032" layer="21"/>
+<smd name="1" x="-5.08" y="-4.78" dx="1" dy="2.94" layer="1"/>
+<smd name="2" x="-2.54" y="-4.78" dx="1" dy="2.94" layer="1"/>
+<smd name="3" x="0" y="-4.78" dx="1" dy="2.94" layer="1"/>
+<smd name="4" x="2.54" y="-4.78" dx="1" dy="2.94" layer="1"/>
+<smd name="5" x="5.08" y="-4.78" dx="1" dy="2.94" layer="1"/>
+<smd name="6" x="5.08" y="4.78" dx="1" dy="2.94" layer="1" rot="R180"/>
+<smd name="7" x="2.54" y="4.78" dx="1" dy="2.94" layer="1" rot="R180"/>
+<smd name="8" x="0" y="4.78" dx="1" dy="2.94" layer="1" rot="R180"/>
+<smd name="9" x="-2.54" y="4.78" dx="1" dy="2.94" layer="1" rot="R180"/>
+<smd name="10" x="-5.08" y="4.78" dx="1" dy="2.94" layer="1" rot="R180"/>
+<text x="-4.445" y="0.635" size="1.27" layer="25">&gt;NAME</text>
+<text x="-4.445" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-7.15" y1="-1" x2="-6.85" y2="1" layer="35"/>
+<rectangle x1="6.85" y1="-1" x2="7.15" y2="1" layer="35"/>
+<rectangle x1="-6.5" y1="-2" x2="-6" y2="2" layer="21"/>
 </package>
-<package name="G6J-2FL-Y">
-<description>&lt;b&gt;Signal Relay - G6J-Y&lt;/b&gt; 5.7 x 10.6 x 9 mm&lt;p&gt;
-Source: http://www.omroncomponents.eu/ .. K125-E2-02-X.pdf</description>
-<wire x1="-4.6" y1="-2.75" x2="5.8" y2="-2.75" width="0.2032" layer="51"/>
-<wire x1="5.8" y1="-2.75" x2="5.8" y2="2.75" width="0.2032" layer="21"/>
-<wire x1="5.8" y1="2.75" x2="-4.6" y2="2.75" width="0.2032" layer="51"/>
-<wire x1="-4.6" y1="2.75" x2="-4.6" y2="-2.75" width="0.2032" layer="21"/>
-<wire x1="-3.81" y1="0.635" x2="-3.81" y2="-0.635" width="0.508" layer="21"/>
-<smd name="1" x="-3.2" y="-2.6" dx="0.8" dy="3.2" layer="1"/>
-<smd name="2" x="0" y="-2.6" dx="0.8" dy="3.2" layer="1"/>
-<smd name="3" x="2.2" y="-2.6" dx="0.8" dy="3.2" layer="1"/>
-<smd name="4" x="4.4" y="-2.6" dx="0.8" dy="3.2" layer="1"/>
-<smd name="5" x="4.4" y="2.6" dx="0.8" dy="3.2" layer="1"/>
-<smd name="6" x="2.2" y="2.6" dx="0.8" dy="3.2" layer="1"/>
-<smd name="7" x="0" y="2.6" dx="0.8" dy="3.2" layer="1"/>
-<smd name="8" x="-3.2" y="2.6" dx="0.8" dy="3.2" layer="1"/>
-<text x="-4.445" y="3.175" size="1.27" layer="25">&gt;NAME</text>
-<text x="-4.445" y="-4.445" size="1.27" layer="27">&gt;VALUE</text>
+<package name="TQ-SL">
+<description>&lt;b&gt;LOW-PROFILE TQ-SMD RELAYS&lt;/b&gt; NAiS&lt;p&gt;
+Source: http://www.mew-europe.com/..  en_ds_61021_0004.pdf</description>
+<wire x1="-6.9" y1="4.4" x2="6.9" y2="4.4" width="0.2032" layer="51"/>
+<wire x1="6.9" y1="4.4" x2="6.9" y2="-4.4" width="0.2032" layer="21"/>
+<wire x1="6.9" y1="-4.4" x2="-6.9" y2="-4.4" width="0.2032" layer="51"/>
+<wire x1="-6.9" y1="-4.4" x2="-6.9" y2="4.4" width="0.2032" layer="21"/>
+<wire x1="-6.9" y1="4.4" x2="-6.1" y2="4.4" width="0.2032" layer="21"/>
+<wire x1="-6.1" y1="-4.4" x2="-6.9" y2="-4.4" width="0.2032" layer="21"/>
+<wire x1="6.1" y1="4.4" x2="6.9" y2="4.4" width="0.2032" layer="21"/>
+<wire x1="6.9" y1="-4.4" x2="6.1" y2="-4.4" width="0.2032" layer="21"/>
+<smd name="1" x="-5.08" y="-4.78" dx="1" dy="2.94" layer="1"/>
+<smd name="2" x="-2.54" y="-4.78" dx="1" dy="2.94" layer="1"/>
+<smd name="3" x="0" y="-4.78" dx="1" dy="2.94" layer="1"/>
+<smd name="4" x="2.54" y="-4.78" dx="1" dy="2.94" layer="1"/>
+<smd name="5" x="5.08" y="-4.78" dx="1" dy="2.94" layer="1"/>
+<smd name="6" x="5.08" y="4.78" dx="1" dy="2.94" layer="1" rot="R180"/>
+<smd name="7" x="2.54" y="4.78" dx="1" dy="2.94" layer="1" rot="R180"/>
+<smd name="8" x="0" y="4.78" dx="1" dy="2.94" layer="1" rot="R180"/>
+<smd name="9" x="-2.54" y="4.78" dx="1" dy="2.94" layer="1" rot="R180"/>
+<smd name="10" x="-5.08" y="4.78" dx="1" dy="2.94" layer="1" rot="R180"/>
+<text x="-4.445" y="0.635" size="1.27" layer="25">&gt;NAME</text>
+<text x="-4.445" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-6.5" y1="-2" x2="-6" y2="2" layer="21"/>
+</package>
+<package name="TQ-SS">
+<description>&lt;b&gt;LOW-PROFILE TQ-SMD RELAYS&lt;/b&gt; NAiS&lt;p&gt;
+Source: http://www.mew-europe.com/..  en_ds_61021_0004.pdf</description>
+<wire x1="-6.9" y1="4.4" x2="6.9" y2="4.4" width="0.2032" layer="51"/>
+<wire x1="6.9" y1="4.4" x2="6.9" y2="-4.4" width="0.2032" layer="21"/>
+<wire x1="6.9" y1="-4.4" x2="-6.9" y2="-4.4" width="0.2032" layer="51"/>
+<wire x1="-6.9" y1="-4.4" x2="-6.9" y2="4.4" width="0.2032" layer="21"/>
+<wire x1="-6.9" y1="4.4" x2="-6.1" y2="4.4" width="0.2032" layer="21"/>
+<wire x1="-6.1" y1="-4.4" x2="-6.9" y2="-4.4" width="0.2032" layer="21"/>
+<wire x1="6.1" y1="4.4" x2="6.9" y2="4.4" width="0.2032" layer="21"/>
+<wire x1="6.9" y1="-4.4" x2="6.1" y2="-4.4" width="0.2032" layer="21"/>
+<smd name="1" x="-5.08" y="-4.23" dx="1" dy="1.84" layer="1"/>
+<smd name="2" x="-2.54" y="-4.23" dx="1" dy="1.84" layer="1"/>
+<smd name="3" x="0" y="-4.23" dx="1" dy="1.84" layer="1"/>
+<smd name="4" x="2.54" y="-4.23" dx="1" dy="1.84" layer="1"/>
+<smd name="5" x="5.08" y="-4.23" dx="1" dy="1.84" layer="1"/>
+<smd name="6" x="5.08" y="4.23" dx="1" dy="1.84" layer="1" rot="R180"/>
+<smd name="7" x="2.54" y="4.23" dx="1" dy="1.84" layer="1" rot="R180"/>
+<smd name="8" x="0" y="4.23" dx="1" dy="1.84" layer="1" rot="R180"/>
+<smd name="9" x="-2.54" y="4.23" dx="1" dy="1.84" layer="1" rot="R180"/>
+<smd name="10" x="-5.08" y="4.23" dx="1" dy="1.84" layer="1" rot="R180"/>
+<text x="-4.445" y="0.635" size="1.27" layer="25">&gt;NAME</text>
+<text x="-4.445" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-6.5" y1="-2" x2="-6" y2="2" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -7997,7 +8042,7 @@ Source: http://www.omroncomponents.eu/ .. K125-E2-02-X.pdf</description>
 <pin name="S" x="-5.08" y="5.08" visible="pad" length="short" direction="pas"/>
 <pin name="P" x="0" y="-2.54" visible="pad" length="short" direction="pas" rot="R90"/>
 </symbol>
-<symbol name="K+-">
+<symbol name="K+-S">
 <wire x1="-3.81" y1="-1.905" x2="-1.905" y2="-1.905" width="0.254" layer="94"/>
 <wire x1="3.81" y1="-1.905" x2="3.81" y2="1.905" width="0.254" layer="94"/>
 <wire x1="3.81" y1="1.905" x2="1.905" y2="1.905" width="0.254" layer="94"/>
@@ -8009,70 +8054,129 @@ Source: http://www.omroncomponents.eu/ .. K125-E2-02-X.pdf</description>
 <wire x1="-1.905" y1="-1.905" x2="1.905" y2="1.905" width="0.1524" layer="94"/>
 <wire x1="-1.905" y1="-1.905" x2="0" y2="-1.905" width="0.254" layer="94"/>
 <wire x1="1.905" y1="1.905" x2="0" y2="1.905" width="0.254" layer="94"/>
-<wire x1="-1.016" y1="2.667" x2="-0.508" y2="2.667" width="0.1524" layer="94"/>
-<wire x1="-0.762" y1="2.921" x2="-0.762" y2="2.413" width="0.1524" layer="94"/>
-<wire x1="-1.016" y1="-2.667" x2="-0.508" y2="-2.667" width="0.1524" layer="94"/>
+<wire x1="4.318" y1="2.159" x2="4.826" y2="2.159" width="0.1524" layer="94"/>
+<wire x1="4.572" y1="2.413" x2="4.572" y2="1.905" width="0.1524" layer="94"/>
+<wire x1="4.318" y1="-2.159" x2="4.826" y2="-2.159" width="0.1524" layer="94"/>
 <text x="1.27" y="2.921" size="1.778" layer="96">&gt;VALUE</text>
 <text x="1.27" y="5.08" size="1.778" layer="95">&gt;PART</text>
+<text x="4.318" y="-0.508" size="1.27" layer="94">S</text>
+<pin name="-" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="+" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="K+-R">
+<wire x1="-3.81" y1="-1.905" x2="-1.905" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="3.81" y1="-1.905" x2="3.81" y2="1.905" width="0.254" layer="94"/>
+<wire x1="3.81" y1="1.905" x2="1.905" y2="1.905" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="1.905" x2="-3.81" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.905" width="0.1524" layer="94"/>
+<wire x1="0" y1="-1.905" x2="3.81" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.905" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.905" x2="-3.81" y2="1.905" width="0.254" layer="94"/>
+<wire x1="-1.905" y1="-1.905" x2="1.905" y2="1.905" width="0.1524" layer="94"/>
+<wire x1="-1.905" y1="-1.905" x2="0" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="1.905" y1="1.905" x2="0" y2="1.905" width="0.254" layer="94"/>
+<wire x1="4.318" y1="2.159" x2="4.826" y2="2.159" width="0.1524" layer="94"/>
+<wire x1="4.572" y1="2.413" x2="4.572" y2="1.905" width="0.1524" layer="94"/>
+<wire x1="4.318" y1="-2.159" x2="4.826" y2="-2.159" width="0.1524" layer="94"/>
+<text x="1.27" y="2.921" size="1.778" layer="96">&gt;VALUE</text>
+<text x="1.27" y="5.08" size="1.778" layer="95">&gt;PART</text>
+<text x="4.318" y="-0.508" size="1.27" layer="94">R</text>
 <pin name="-" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
 <pin name="+" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="G6J*-2?-Y" prefix="K">
-<description>&lt;b&gt;Surface-Mounting Signal Relay - G6J-Y&lt;/b&gt; 5.7 x 10.6 x 9 mm&lt;p&gt;
-Source: http://www.omroncomponents.eu/ .. K125-E2-02-X.pdf</description>
+<deviceset name="TQ2?-L2-*" prefix="K">
+<description>&lt;b&gt;LOW PROFILE 2 FORM C RELAY&lt;/b&gt; NAiS&lt;p&gt;
+2 coil latching&lt;br&gt;
+Source: http://www.mew-europe.com/..  en_ds_61020_0001.pdf
+Source: http://www.mew-europe.com/..  en_ds_61020_0002.pdf</description>
 <gates>
-<gate name="1" symbol="K+-" x="-15.24" y="0" addlevel="must"/>
-<gate name="2" symbol="U" x="0" y="-2.54" addlevel="always"/>
-<gate name="3" symbol="U" x="17.78" y="-2.54" addlevel="always"/>
+<gate name="S" symbol="K+-S" x="-7.62" y="10.16" addlevel="must" swaplevel="1"/>
+<gate name="R" symbol="K+-R" x="-7.62" y="-5.08" addlevel="always" swaplevel="1"/>
+<gate name="1" symbol="U" x="10.16" y="10.16" addlevel="always" swaplevel="2"/>
+<gate name="2" symbol="U" x="10.16" y="-7.62" addlevel="always" swaplevel="2"/>
 </gates>
 <devices>
-<device name="P" package="G6J-2P-Y">
+<device name="" package="TQ2">
 <connects>
-<connect gate="1" pin="+" pad="1"/>
-<connect gate="1" pin="-" pad="8"/>
-<connect gate="2" pin="O" pad="2"/>
-<connect gate="2" pin="P" pad="3"/>
-<connect gate="2" pin="S" pad="4"/>
-<connect gate="3" pin="O" pad="7"/>
-<connect gate="3" pin="P" pad="6"/>
-<connect gate="3" pin="S" pad="5"/>
+<connect gate="1" pin="O" pad="2"/>
+<connect gate="1" pin="P" pad="3"/>
+<connect gate="1" pin="S" pad="4"/>
+<connect gate="2" pin="O" pad="9"/>
+<connect gate="2" pin="P" pad="8"/>
+<connect gate="2" pin="S" pad="7"/>
+<connect gate="R" pin="+" pad="10"/>
+<connect gate="R" pin="-" pad="6"/>
+<connect gate="S" pin="+" pad="1"/>
+<connect gate="S" pin="-" pad="5"/>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MF" value="OMRON COMPONENTS USA" constant="no"/>
-<attribute name="MPN" value="G6J-2P-Y-DC12" constant="no"/>
-<attribute name="OC_FARNELL" value="unknown" constant="no"/>
-<attribute name="OC_NEWARK" value="70J9830" constant="no"/>
-</technology>
-<technology name="U">
-<attribute name="MF" value="OMRON COMPONENTS USA" constant="no"/>
-<attribute name="MPN" value="G6JU-2P-Y-DC12" constant="no"/>
-<attribute name="OC_FARNELL" value="unknown" constant="no"/>
-<attribute name="OC_NEWARK" value="70J9842" constant="no"/>
+<attribute name="MF" value="AROMAT/ MATSUSHITA" constant="no"/>
+<attribute name="MPN" value="TQ2-L2-9V" constant="no"/>
+<attribute name="OC_FARNELL" value="1217662" constant="no"/>
+<attribute name="OC_NEWARK" value="64K3196" constant="no"/>
 </technology>
 </technologies>
 </device>
-<device name="FS" package="G6J-2FS-Y">
+<device name="SA" package="TQ-SA">
 <connects>
-<connect gate="1" pin="+" pad="1"/>
-<connect gate="1" pin="-" pad="8"/>
-<connect gate="2" pin="O" pad="2"/>
-<connect gate="2" pin="P" pad="3"/>
-<connect gate="2" pin="S" pad="4"/>
-<connect gate="3" pin="O" pad="7"/>
-<connect gate="3" pin="P" pad="6"/>
-<connect gate="3" pin="S" pad="5"/>
+<connect gate="1" pin="O" pad="2"/>
+<connect gate="1" pin="P" pad="3"/>
+<connect gate="1" pin="S" pad="4"/>
+<connect gate="2" pin="O" pad="9"/>
+<connect gate="2" pin="P" pad="8"/>
+<connect gate="2" pin="S" pad="7"/>
+<connect gate="R" pin="+" pad="10"/>
+<connect gate="R" pin="-" pad="6"/>
+<connect gate="S" pin="+" pad="1"/>
+<connect gate="S" pin="-" pad="5"/>
 </connects>
 <technologies>
-<technology name="">
+<technology name="1.5V">
 <attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="G6J-2FS-Y DC4.5" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
 <attribute name="OC_FARNELL" value="unknown" constant="no"/>
-<attribute name="OC_NEWARK" value="04M9910" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
 </technology>
-<technology name="U">
+<technology name="12V">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TQ2SA-L2-12V" constant="no"/>
+<attribute name="OC_FARNELL" value="1124058" constant="no"/>
+<attribute name="OC_NEWARK" value="02M6304" constant="no"/>
+</technology>
+<technology name="24V">
+<attribute name="MF" value="FARNELL" constant="no"/>
+<attribute name="MPN" value="TQ2SA-L2-24V" constant="no"/>
+<attribute name="OC_FARNELL" value="625784" constant="no"/>
+<attribute name="OC_NEWARK" value="15J0011" constant="no"/>
+</technology>
+<technology name="3V">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TQ2SA-L2-3V" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="15P9786" constant="no"/>
+</technology>
+<technology name="4.5V">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TQ2SA-L2-4.5V" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="15P9788" constant="no"/>
+</technology>
+<technology name="5V">
+<attribute name="MF" value="AROMAT/ MATSUSHITA" constant="no"/>
+<attribute name="MPN" value="TQ2SA-L2-5V" constant="no"/>
+<attribute name="OC_FARNELL" value="625760" constant="no"/>
+<attribute name="OC_NEWARK" value="64K3202" constant="no"/>
+</technology>
+<technology name="6V">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="9V">
 <attribute name="MF" value="" constant="no"/>
 <attribute name="MPN" value="" constant="no"/>
 <attribute name="OC_FARNELL" value="unknown" constant="no"/>
@@ -8080,29 +8184,131 @@ Source: http://www.omroncomponents.eu/ .. K125-E2-02-X.pdf</description>
 </technology>
 </technologies>
 </device>
-<device name="FL" package="G6J-2FL-Y">
+<device name="SL" package="TQ-SL">
 <connects>
-<connect gate="1" pin="+" pad="1"/>
-<connect gate="1" pin="-" pad="8"/>
-<connect gate="2" pin="O" pad="2"/>
-<connect gate="2" pin="P" pad="3"/>
-<connect gate="2" pin="S" pad="4"/>
-<connect gate="3" pin="O" pad="7"/>
-<connect gate="3" pin="P" pad="6"/>
-<connect gate="3" pin="S" pad="5"/>
+<connect gate="1" pin="O" pad="2"/>
+<connect gate="1" pin="P" pad="3"/>
+<connect gate="1" pin="S" pad="4"/>
+<connect gate="2" pin="O" pad="9"/>
+<connect gate="2" pin="P" pad="8"/>
+<connect gate="2" pin="S" pad="7"/>
+<connect gate="R" pin="+" pad="10"/>
+<connect gate="R" pin="-" pad="6"/>
+<connect gate="S" pin="+" pad="1"/>
+<connect gate="S" pin="-" pad="5"/>
 </connects>
 <technologies>
-<technology name="">
+<technology name="1.5V">
 <attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="G6J-2FL-Y-TR DC4.5" constant="no"/>
-<attribute name="OC_FARNELL" value="1798618" constant="no"/>
-<attribute name="OC_NEWARK" value="04M9907" constant="no"/>
-</technology>
-<technology name="U">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="G6JU-2FL-Y DC3" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
 <attribute name="OC_FARNELL" value="unknown" constant="no"/>
-<attribute name="OC_NEWARK" value="04M9916" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="12V">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="24V">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TQ2SL-L2-24V" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="15P9794" constant="no"/>
+</technology>
+<technology name="3V">
+<attribute name="MF" value="AROMAT/ MATSUSHITA" constant="no"/>
+<attribute name="MPN" value="TQ2SL-L2-3V-Z" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="10C9899" constant="no"/>
+</technology>
+<technology name="4.5V">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TQ2SL-L2-4.5V" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="15P9795" constant="no"/>
+</technology>
+<technology name="5V">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TQ2SL-L2-5V" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="15P9796" constant="no"/>
+</technology>
+<technology name="6V">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="9V">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="SS" package="TQ-SS">
+<connects>
+<connect gate="1" pin="O" pad="2"/>
+<connect gate="1" pin="P" pad="3"/>
+<connect gate="1" pin="S" pad="4"/>
+<connect gate="2" pin="O" pad="9"/>
+<connect gate="2" pin="P" pad="8"/>
+<connect gate="2" pin="S" pad="7"/>
+<connect gate="R" pin="+" pad="10"/>
+<connect gate="R" pin="-" pad="6"/>
+<connect gate="S" pin="+" pad="1"/>
+<connect gate="S" pin="-" pad="5"/>
+</connects>
+<technologies>
+<technology name="1.5V">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="12V">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TQ2SS-L2-12V" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="15P9800" constant="no"/>
+</technology>
+<technology name="24V">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TQ2SS-L2-24V" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="15P9801" constant="no"/>
+</technology>
+<technology name="3V">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TQ2SS-L2-3V" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="15P9802" constant="no"/>
+</technology>
+<technology name="4.5V">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TQ2SS-L2-4.5V-Z" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="15P9803" constant="no"/>
+</technology>
+<technology name="5V">
+<attribute name="MF" value="AROMAT/ MATSUSHITA" constant="no"/>
+<attribute name="MPN" value="TQ2SS-L2-5V" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="64K3206" constant="no"/>
+</technology>
+<technology name="6V">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="9V">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -9611,15 +9817,11 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <part name="P+1" library="supply1" deviceset="+5V" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="IC3" library="linear" deviceset="78L*SMD" device="" technology="12"/>
-<part name="R1" library="rcl" deviceset="R-EU_" device="M1206" value="3k9"/>
-<part name="R2" library="rcl" deviceset="R-EU_" device="M1206" value="2k2"/>
 <part name="IC1" library="SparkFun-Boards" deviceset="SPARKFUN_PRO_MICRO" device="" value="PRO_MICRO"/>
 <part name="S1" library="switch-omron" deviceset="10-XX" device=""/>
 <part name="S2" library="switch-omron" deviceset="10-XX" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="K4" library="relay" deviceset="G6J*-2?-Y" device="P"/>
-<part name="T1" library="transistor" deviceset="*-NPN-" device="SOT23-BEC" technology="MMBT3904LT1"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="C4" library="rcl" deviceset="C-EU" device="C1206K"/>
 <part name="R3" library="rcl" deviceset="R-EU_" device="M1206"/>
@@ -9631,12 +9833,28 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <part name="R5" library="rcl" deviceset="R-EU_" device="M1206"/>
 <part name="R6" library="rcl" deviceset="R-EU_" device="M1206"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
-<part name="GND10" library="supply1" deviceset="GND" device=""/>
-<part name="R7" library="rcl" deviceset="R-EU_" device="M1206" value="1k"/>
-<part name="P+3" library="supply1" deviceset="+5V" device=""/>
 <part name="C7" library="rcl" deviceset="C-EU" device="C1206K"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
+<part name="K1" library="relay" deviceset="TQ2?-L2-*" device="SA" technology="5V"/>
+<part name="T2" library="transistor" deviceset="*-NPN-" device="SOT23-BEC" technology="MMBT3904LT1"/>
+<part name="GND12" library="supply1" deviceset="GND" device=""/>
+<part name="R8" library="rcl" deviceset="R-EU_" device="M1206" value="1k"/>
+<part name="P+4" library="supply1" deviceset="+5V" device=""/>
+<part name="R9" library="rcl" deviceset="R-EU_" device="M1206" value="10k"/>
+<part name="GND13" library="supply1" deviceset="GND" device=""/>
+<part name="T3" library="transistor" deviceset="*-NPN-" device="SOT23-BEC" technology="MMBT3904LT1"/>
+<part name="GND14" library="supply1" deviceset="GND" device=""/>
+<part name="R10" library="rcl" deviceset="R-EU_" device="M1206" value="1k"/>
+<part name="R11" library="rcl" deviceset="R-EU_" device="M1206" value="10k"/>
+<part name="GND15" library="supply1" deviceset="GND" device=""/>
+<part name="P+5" library="supply1" deviceset="+5V" device=""/>
+<part name="S3" library="switch-omron" deviceset="10-XX" device=""/>
+<part name="S4" library="switch-omron" deviceset="10-XX" device=""/>
+<part name="GND10" library="supply1" deviceset="GND" device=""/>
+<part name="GND16" library="supply1" deviceset="GND" device=""/>
+<part name="S5" library="switch-omron" deviceset="10-XX" device=""/>
+<part name="GND17" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9656,17 +9874,11 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <instance part="P+1" gate="1" x="167.64" y="149.86"/>
 <instance part="GND3" gate="1" x="167.64" y="132.08"/>
 <instance part="IC3" gate="G$1" x="154.94" y="119.38"/>
-<instance part="R1" gate="G$1" x="-15.24" y="99.06"/>
-<instance part="R2" gate="G$1" x="-15.24" y="88.9"/>
 <instance part="IC1" gate="G$1" x="48.26" y="142.24"/>
 <instance part="S1" gate="1" x="-20.32" y="129.54"/>
 <instance part="S2" gate="1" x="0" y="129.54"/>
 <instance part="GND4" gate="1" x="0" y="116.84"/>
 <instance part="GND5" gate="1" x="-20.32" y="116.84"/>
-<instance part="K4" gate="1" x="93.98" y="66.04"/>
-<instance part="K4" gate="2" x="35.56" y="58.42" rot="R270"/>
-<instance part="K4" gate="3" x="35.56" y="43.18" rot="R270"/>
-<instance part="T1" gate="G$1" x="91.44" y="53.34"/>
 <instance part="GND6" gate="1" x="154.94" y="99.06"/>
 <instance part="C4" gate="G$1" x="73.66" y="109.22" rot="R90"/>
 <instance part="R3" gate="G$1" x="86.36" y="109.22"/>
@@ -9678,12 +9890,31 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <instance part="R5" gate="G$1" x="127" y="109.22"/>
 <instance part="R6" gate="G$1" x="134.62" y="101.6" rot="R90"/>
 <instance part="GND9" gate="1" x="134.62" y="93.98"/>
-<instance part="GND10" gate="1" x="93.98" y="43.18"/>
-<instance part="R7" gate="G$1" x="81.28" y="53.34"/>
-<instance part="P+3" gate="1" x="93.98" y="76.2"/>
 <instance part="C7" gate="G$1" x="190.5" y="68.58"/>
 <instance part="GND11" gate="1" x="190.5" y="58.42"/>
 <instance part="+3V1" gate="G$1" x="190.5" y="76.2"/>
+<instance part="K1" gate="S" x="124.46" y="33.02"/>
+<instance part="K1" gate="R" x="162.56" y="33.02"/>
+<instance part="K1" gate="1" x="78.74" y="7.62" rot="R270"/>
+<instance part="K1" gate="2" x="78.74" y="25.4" rot="R270"/>
+<instance part="T2" gate="G$1" x="121.92" y="20.32"/>
+<instance part="GND12" gate="1" x="124.46" y="2.54"/>
+<instance part="R8" gate="G$1" x="109.22" y="20.32"/>
+<instance part="P+4" gate="1" x="124.46" y="43.18"/>
+<instance part="R9" gate="G$1" x="116.84" y="12.7" rot="R90"/>
+<instance part="GND13" gate="1" x="116.84" y="2.54"/>
+<instance part="T3" gate="G$1" x="160.02" y="20.32"/>
+<instance part="GND14" gate="1" x="162.56" y="2.54"/>
+<instance part="R10" gate="G$1" x="147.32" y="20.32"/>
+<instance part="R11" gate="G$1" x="154.94" y="12.7" rot="R90"/>
+<instance part="GND15" gate="1" x="154.94" y="2.54"/>
+<instance part="P+5" gate="1" x="162.56" y="43.18"/>
+<instance part="S3" gate="1" x="-20.32" y="99.06"/>
+<instance part="S4" gate="1" x="0" y="99.06"/>
+<instance part="GND10" gate="1" x="0" y="86.36"/>
+<instance part="GND16" gate="1" x="-20.32" y="86.36"/>
+<instance part="S5" gate="1" x="17.78" y="99.06"/>
+<instance part="GND17" gate="1" x="17.78" y="86.36"/>
 </instances>
 <busses>
 </busses>
@@ -9710,9 +9941,14 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <label x="66.04" y="157.48" size="0.8128" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="K4" gate="1" pin="+"/>
-<wire x1="93.98" y1="71.12" x2="93.98" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="P+3" gate="1" pin="+5V"/>
+<pinref part="K1" gate="S" pin="+"/>
+<pinref part="P+4" gate="1" pin="+5V"/>
+<wire x1="124.46" y1="40.64" x2="124.46" y2="38.1" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="K1" gate="R" pin="+"/>
+<pinref part="P+5" gate="1" pin="+5V"/>
+<wire x1="162.56" y1="40.64" x2="162.56" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -9799,23 +10035,59 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <pinref part="GND8" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="K4" gate="3" pin="S"/>
-<wire x1="40.64" y1="48.26" x2="43.18" y2="48.26" width="0.1524" layer="91"/>
-<label x="43.18" y="48.26" size="0.8128" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="R6" gate="G$1" pin="1"/>
 <pinref part="GND9" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="T1" gate="G$1" pin="E"/>
-<pinref part="GND10" gate="1" pin="GND"/>
-<wire x1="93.98" y1="45.72" x2="93.98" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND11" gate="1" pin="GND"/>
 <pinref part="C7" gate="G$1" pin="2"/>
 <wire x1="190.5" y1="60.96" x2="190.5" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="T2" gate="G$1" pin="E"/>
+<pinref part="GND12" gate="1" pin="GND"/>
+<wire x1="124.46" y1="5.08" x2="124.46" y2="15.24" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R9" gate="G$1" pin="1"/>
+<pinref part="GND13" gate="1" pin="GND"/>
+<wire x1="116.84" y1="5.08" x2="116.84" y2="7.62" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="T3" gate="G$1" pin="E"/>
+<pinref part="GND14" gate="1" pin="GND"/>
+<wire x1="162.56" y1="5.08" x2="162.56" y2="15.24" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R11" gate="G$1" pin="1"/>
+<pinref part="GND15" gate="1" pin="GND"/>
+<wire x1="154.94" y1="5.08" x2="154.94" y2="7.62" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="K1" gate="1" pin="S"/>
+<wire x1="83.82" y1="12.7" x2="86.36" y2="12.7" width="0.1524" layer="91"/>
+<label x="86.36" y="12.7" size="0.8128" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="GND16" gate="1" pin="GND"/>
+<pinref part="S3" gate="1" pin="P"/>
+<wire x1="-20.32" y1="88.9" x2="-20.32" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="S3" gate="1" pin="P1"/>
+<wire x1="-20.32" y1="93.98" x2="-17.78" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND10" gate="1" pin="GND"/>
+<pinref part="S4" gate="1" pin="P"/>
+<wire x1="0" y1="88.9" x2="0" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="S4" gate="1" pin="P1"/>
+<wire x1="0" y1="93.98" x2="2.54" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND17" gate="1" pin="GND"/>
+<pinref part="S5" gate="1" pin="P"/>
+<wire x1="17.78" y1="88.9" x2="17.78" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="S5" gate="1" pin="P1"/>
+<wire x1="17.78" y1="93.98" x2="20.32" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -9876,7 +10148,9 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <net name="PTT" class="0">
 <segment>
 <pinref part="CONN_MIC" gate="G$1" pin="4"/>
-<wire x1="-27.94" y1="50.8" x2="10.16" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="50.8" x2="0" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="CONN_RADIO" gate="G$1" pin="4"/>
+<wire x1="0" y1="50.8" x2="10.16" y2="50.8" width="0.1524" layer="91"/>
 <label x="10.16" y="50.8" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
@@ -9907,31 +10181,6 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <wire x1="-27.94" y1="55.88" x2="0" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="0" y1="55.88" x2="10.16" y2="55.88" width="0.1524" layer="91"/>
 </segment>
-<segment>
-<wire x1="-27.94" y1="91.44" x2="-22.86" y2="91.44" width="0.1524" layer="91"/>
-<label x="-27.94" y="91.44" size="1.016" layer="95" rot="R180" xref="yes"/>
-<pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="-20.32" y1="88.9" x2="-22.86" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="-22.86" y1="88.9" x2="-22.86" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="-22.86" y1="91.44" x2="-22.86" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="-22.86" y1="99.06" x2="-20.32" y2="99.06" width="0.1524" layer="91"/>
-<junction x="-22.86" y="91.44"/>
-</segment>
-</net>
-<net name="DAH" class="0">
-<segment>
-<pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="-10.16" y1="88.9" x2="-7.62" y2="88.9" width="0.1524" layer="91"/>
-<label x="-7.62" y="88.9" size="1.016" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="DIT" class="0">
-<segment>
-<pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="-10.16" y1="99.06" x2="-7.62" y2="99.06" width="0.1524" layer="91"/>
-<label x="-7.62" y="99.06" size="1.016" layer="95" xref="yes"/>
-</segment>
 </net>
 <net name="SQUELCH" class="0">
 <segment>
@@ -9948,15 +10197,9 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <label x="-2.54" y="48.26" size="0.8128" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="K4" gate="3" pin="P"/>
-<wire x1="33.02" y1="43.18" x2="30.48" y2="43.18" width="0.1524" layer="91"/>
-<label x="30.48" y="43.18" size="0.8128" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="CONN_RADIO" gate="G$1" pin="4"/>
-<wire x1="0" y1="50.8" x2="-2.54" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="K1" gate="1" pin="P"/>
+<wire x1="76.2" y1="7.62" x2="73.66" y2="7.62" width="0.1524" layer="91"/>
+<label x="73.66" y="7.62" size="0.8128" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="AF_OUT" class="0">
@@ -9975,9 +10218,9 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <label x="-25.4" y="45.72" size="0.8128" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="K4" gate="2" pin="O"/>
-<wire x1="40.64" y1="53.34" x2="43.18" y2="53.34" width="0.1524" layer="91"/>
-<label x="43.18" y="53.34" size="0.8128" layer="95" xref="yes"/>
+<pinref part="K1" gate="2" pin="O"/>
+<wire x1="83.82" y1="20.32" x2="86.36" y2="20.32" width="0.1524" layer="91"/>
+<label x="86.36" y="20.32" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="MIC_RADIO" class="0">
@@ -9987,9 +10230,9 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <label x="-2.54" y="45.72" size="0.8128" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="K4" gate="2" pin="P"/>
-<wire x1="33.02" y1="58.42" x2="30.48" y2="58.42" width="0.1524" layer="91"/>
-<label x="30.48" y="58.42" size="0.8128" layer="95" rot="R180" xref="yes"/>
+<pinref part="K1" gate="2" pin="P"/>
+<wire x1="76.2" y1="25.4" x2="73.66" y2="25.4" width="0.1524" layer="91"/>
+<label x="73.66" y="25.4" size="0.8128" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="MIC_GND" class="0">
@@ -9999,17 +10242,12 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <label x="-25.4" y="48.26" size="0.8128" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="K4" gate="3" pin="O"/>
-<wire x1="40.64" y1="38.1" x2="43.18" y2="38.1" width="0.1524" layer="91"/>
-<label x="43.18" y="38.1" size="0.8128" layer="95" xref="yes"/>
+<pinref part="K1" gate="1" pin="O"/>
+<wire x1="83.82" y1="2.54" x2="86.36" y2="2.54" width="0.1524" layer="91"/>
+<label x="86.36" y="2.54" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="MIC_PWM" class="0">
-<segment>
-<pinref part="K4" gate="2" pin="S"/>
-<wire x1="40.64" y1="63.5" x2="43.18" y2="63.5" width="0.1524" layer="91"/>
-<label x="43.18" y="63.5" size="0.8128" layer="95" xref="yes"/>
-</segment>
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="132.08" y1="109.22" x2="134.62" y2="109.22" width="0.1524" layer="91"/>
@@ -10018,6 +10256,11 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <wire x1="134.62" y1="109.22" x2="137.16" y2="109.22" width="0.1524" layer="91"/>
 <junction x="134.62" y="109.22"/>
 <label x="137.16" y="109.22" size="0.8128" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="K1" gate="2" pin="S"/>
+<wire x1="83.82" y1="30.48" x2="86.36" y2="30.48" width="0.1524" layer="91"/>
+<label x="86.36" y="30.48" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="PWM" class="0">
@@ -10075,20 +10318,6 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
 </segment>
 </net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="T1" gate="G$1" pin="C"/>
-<pinref part="K4" gate="1" pin="-"/>
-<wire x1="93.98" y1="58.42" x2="93.98" y2="60.96" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="T1" gate="G$1" pin="B"/>
-<pinref part="R7" gate="G$1" pin="2"/>
-<wire x1="86.36" y1="53.34" x2="88.9" y2="53.34" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$6" class="0">
 <segment>
 <pinref part="R4" gate="G$1" pin="S"/>
@@ -10096,6 +10325,130 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <wire x1="109.22" y1="101.6" x2="109.22" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="C6" gate="G$1" pin="1"/>
 <wire x1="109.22" y1="109.22" x2="111.76" y2="109.22" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="T2" gate="G$1" pin="C"/>
+<wire x1="124.46" y1="25.4" x2="124.46" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="K1" gate="S" pin="-"/>
+</segment>
+</net>
+<net name="N$11" class="0">
+<segment>
+<pinref part="T2" gate="G$1" pin="B"/>
+<pinref part="R8" gate="G$1" pin="2"/>
+<wire x1="114.3" y1="20.32" x2="116.84" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="R9" gate="G$1" pin="2"/>
+<wire x1="116.84" y1="20.32" x2="119.38" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="17.78" x2="116.84" y2="20.32" width="0.1524" layer="91"/>
+<junction x="116.84" y="20.32"/>
+</segment>
+</net>
+<net name="PULSE_TX" class="0">
+<segment>
+<pinref part="R8" gate="G$1" pin="1"/>
+<wire x1="104.14" y1="20.32" x2="101.6" y2="20.32" width="0.1524" layer="91"/>
+<label x="101.6" y="20.32" size="0.8128" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="4"/>
+<wire x1="38.1" y1="142.24" x2="33.02" y2="142.24" width="0.1524" layer="91"/>
+<label x="33.02" y="142.24" size="0.8128" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="N$13" class="0">
+<segment>
+<pinref part="T3" gate="G$1" pin="C"/>
+<wire x1="162.56" y1="25.4" x2="162.56" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="K1" gate="R" pin="-"/>
+</segment>
+</net>
+<net name="N$14" class="0">
+<segment>
+<pinref part="T3" gate="G$1" pin="B"/>
+<pinref part="R10" gate="G$1" pin="2"/>
+<wire x1="152.4" y1="20.32" x2="154.94" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="R11" gate="G$1" pin="2"/>
+<wire x1="154.94" y1="20.32" x2="157.48" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="17.78" x2="154.94" y2="20.32" width="0.1524" layer="91"/>
+<junction x="154.94" y="20.32"/>
+</segment>
+</net>
+<net name="PULSE_RX" class="0">
+<segment>
+<pinref part="R10" gate="G$1" pin="1"/>
+<wire x1="142.24" y1="20.32" x2="139.7" y2="20.32" width="0.1524" layer="91"/>
+<label x="139.7" y="20.32" size="0.8128" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="*5"/>
+<wire x1="38.1" y1="139.7" x2="33.02" y2="139.7" width="0.1524" layer="91"/>
+<label x="33.02" y="139.7" size="0.8128" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="BUTTON2" class="0">
+<segment>
+<pinref part="S1" gate="1" pin="S"/>
+<wire x1="-20.32" y1="134.62" x2="-20.32" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="137.16" x2="-15.24" y2="137.16" width="0.1524" layer="91"/>
+<label x="-15.24" y="137.16" size="0.8128" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="BUTTON1" class="0">
+<segment>
+<pinref part="S2" gate="1" pin="S"/>
+<wire x1="0" y1="134.62" x2="0" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="0" y1="137.16" x2="5.08" y2="137.16" width="0.1524" layer="91"/>
+<label x="5.08" y="137.16" size="0.8128" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="S3" gate="1" pin="S"/>
+<wire x1="-20.32" y1="104.14" x2="-20.32" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="106.68" x2="-15.24" y2="106.68" width="0.1524" layer="91"/>
+<label x="-15.24" y="106.68" size="0.8128" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="S4" gate="1" pin="S"/>
+<wire x1="0" y1="104.14" x2="0" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="0" y1="106.68" x2="5.08" y2="106.68" width="0.1524" layer="91"/>
+<label x="5.08" y="106.68" size="0.8128" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$15" class="0">
+<segment>
+<pinref part="S5" gate="1" pin="S"/>
+<wire x1="17.78" y1="104.14" x2="17.78" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="106.68" x2="22.86" y2="106.68" width="0.1524" layer="91"/>
+<label x="22.86" y="106.68" size="0.8128" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="A3"/>
+<wire x1="60.96" y1="147.32" x2="66.04" y2="147.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="A2"/>
+<wire x1="60.96" y1="144.78" x2="66.04" y2="144.78" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$16" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="A1"/>
+<wire x1="60.96" y1="142.24" x2="66.04" y2="142.24" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="A0"/>
+<wire x1="60.96" y1="139.7" x2="66.04" y2="139.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
