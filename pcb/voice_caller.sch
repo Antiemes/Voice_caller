@@ -10423,9 +10423,9 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <label x="-15.24" y="137.16" size="0.8128" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="A1"/>
-<wire x1="60.96" y1="142.24" x2="66.04" y2="142.24" width="0.1524" layer="91"/>
-<label x="66.04" y="142.24" size="0.8128" layer="95" xref="yes"/>
+<pinref part="IC1" gate="G$1" pin="A2"/>
+<wire x1="60.96" y1="144.78" x2="66.04" y2="144.78" width="0.1524" layer="91"/>
+<label x="66.04" y="144.78" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="BUTTON1" class="0">
@@ -10436,17 +10436,12 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <label x="5.08" y="137.16" size="0.8128" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="A2"/>
-<wire x1="60.96" y1="144.78" x2="66.04" y2="144.78" width="0.1524" layer="91"/>
-<label x="66.04" y="144.78" size="0.8128" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="PTT_SENSE" class="0">
-<segment>
 <pinref part="IC1" gate="G$1" pin="A3"/>
 <wire x1="60.96" y1="147.32" x2="66.04" y2="147.32" width="0.1524" layer="91"/>
 <label x="66.04" y="147.32" size="0.8128" layer="95" xref="yes"/>
 </segment>
+</net>
+<net name="PTT_SENSE" class="0">
 <segment>
 <pinref part="T1" gate="G$1" pin="E"/>
 <pinref part="R1" gate="G$1" pin="2"/>
@@ -10454,6 +10449,11 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <wire x1="83.82" y1="63.5" x2="86.36" y2="63.5" width="0.1524" layer="91"/>
 <junction x="83.82" y="63.5"/>
 <label x="86.36" y="63.5" size="0.8128" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="A1"/>
+<wire x1="60.96" y1="142.24" x2="66.04" y2="142.24" width="0.1524" layer="91"/>
+<label x="66.04" y="142.24" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="BUTTON3" class="0">
