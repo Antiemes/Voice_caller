@@ -9900,10 +9900,10 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <part name="CONN_RADIO" library="con-tycoelectronics" deviceset="RJ45" device="" technology="-8L-B"/>
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="C1" library="rcl" deviceset="C-EU" device="C1206K"/>
-<part name="C2" library="rcl" deviceset="C-EU" device="C1206K"/>
+<part name="C1" library="rcl" deviceset="C-EU" device="C1206K" value="100nF"/>
+<part name="C2" library="rcl" deviceset="C-EU" device="C1206K" value="100nF"/>
 <part name="IC2" library="memory-atmel" deviceset="AT45DB321D-S" device=""/>
-<part name="C3" library="rcl" deviceset="C-EU" device="C1206K"/>
+<part name="C3" library="rcl" deviceset="C-EU" device="C1206K" value="100nF"/>
 <part name="P+1" library="supply1" deviceset="+5V" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="IC3" library="linear" deviceset="78L*SMD" device="" technology="12"/>
@@ -9913,17 +9913,17 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
-<part name="C4" library="rcl" deviceset="C-EU" device="C1206K"/>
-<part name="R3" library="rcl" deviceset="R-EU_" device="M1206"/>
-<part name="C5" library="rcl" deviceset="C-EU" device="C1206K"/>
+<part name="C4" library="rcl" deviceset="C-EU" device="C1206K" value="100nF"/>
+<part name="R3" library="rcl" deviceset="R-EU_" device="M1206" value="3k3"/>
+<part name="C5" library="rcl" deviceset="C-EU" device="C1206K" value="10nF"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="R4" library="rcl" deviceset="R-TRIMM" device="T93XB"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
-<part name="C6" library="rcl" deviceset="C-EU" device="C1206K"/>
-<part name="R5" library="rcl" deviceset="R-EU_" device="M1206"/>
-<part name="R6" library="rcl" deviceset="R-EU_" device="M1206"/>
+<part name="C6" library="rcl" deviceset="C-EU" device="C1206K" value="100nF"/>
+<part name="R5" library="rcl" deviceset="R-EU_" device="M1206" value="100k"/>
+<part name="R6" library="rcl" deviceset="R-EU_" device="M1206" value="470"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
-<part name="C7" library="rcl" deviceset="C-EU" device="C1206K"/>
+<part name="C7" library="rcl" deviceset="C-EU" device="C1206K" value="100nF"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="K1" library="relay" deviceset="TQ2?-L2-*" device="SA" technology="5V"/>
@@ -9946,13 +9946,13 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <part name="S5" library="switch-omron" deviceset="10-XX" device=""/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="T1" library="transistor" deviceset="*-NPN-" device="SOT23-BEC" technology="MMBT3904LT1"/>
-<part name="R1" library="rcl" deviceset="R-EU_" device="M1206"/>
+<part name="R1" library="rcl" deviceset="R-EU_" device="M1206" value="4r7"/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
-<part name="R2" library="rcl" deviceset="R-EU_" device="M1206"/>
-<part name="R7" library="rcl" deviceset="R-EU_" device="M1206"/>
+<part name="R2" library="rcl" deviceset="R-EU_" device="M1206" value="1k"/>
+<part name="R7" library="rcl" deviceset="R-EU_" device="M1206" value="10k"/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
-<part name="R12" library="rcl" deviceset="R-EU_" device="M1206"/>
-<part name="R13" library="rcl" deviceset="R-EU_" device="M1206"/>
+<part name="R12" library="rcl" deviceset="R-EU_" device="M1206" value="220"/>
+<part name="R13" library="rcl" deviceset="R-EU_" device="M1206" value="220"/>
 <part name="JP2" library="pinhead" deviceset="PINHD-1X2" device=""/>
 <part name="JP3" library="pinhead" deviceset="PINHD-1X2" device=""/>
 </parts>
