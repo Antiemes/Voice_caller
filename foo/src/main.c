@@ -28,8 +28,8 @@ volatile voice_state_t voiceState=STOPPED;
 void pwm_init()
 {
   DDRB |= _BV(PB6);
-	TCCR1A |= _BV(COM1A1) | _BV(WGM10);
-  TCCR1B |= _BV(CS10) | _BV(WGM12);
+//	TCCR1A |= _BV(COM1A1) | _BV(WGM10);
+//  TCCR1B |= _BV(CS10) | _BV(WGM12);
 }
 
 //=====================================================================
@@ -117,13 +117,21 @@ int main()
   //ledInit();
   //pttInit();
 
-  timerInit();
-  timerStart();
+  //timerInit();
+  //timerStart();
   
   //PORTD |= _BV(PD2) | _BV(PD3);
   //DDRD &= ~_BV(PD2) | _BV(PD3);
 
   _delay_ms(100);
+
+  while(1)
+  {
+    PORTB |= _BV(PB6);
+    _delay_ms(1);
+    PORTB &= ~_BV(PB6);
+    _delay_ms(1);
+  }
 
   while(1)
   {
