@@ -127,56 +127,60 @@ int main()
 
   while(1)
   {
-    if (!debounce1)
+    if (voiceState!=RUNNING)
     {
-      if (!(PIND & _BV(PD2)))
-      {
-        if (!inhibit1)
-        {
-          voice_state_t newState=voiceState;
-          debounce1=4000;
-          inhibit1=1;
-          if (voiceState==STOPPED)
-          {
-            led(1);
-            ptt(1);
-            newState=RUNNING;
-            seekToTrack(sampleNum);
-          }
-          else
-          {
-            newState=STOPPED;
-            ptt(0);
-            led(0);
-          }
-          voiceState=newState;
-        }
-      }
-      else
-      {
-        inhibit1=0;
-      }
+      voiceState=RUNNING;
     }
-    if (!debounce2)
-    {
-      if (!(PIND & _BV(PD3)))
-      {
-        if (!inhibit2)
-        {
-          debounce2=4000;
-          inhibit2=1;
-          sampleNum++;
-          if (sampleNum==samples)
-          {
-            sampleNum=0;
-          }
-        }
-      }
-      else
-      {
-        inhibit2=0;
-      }
-    }
+//    if (!debounce1)
+//    {
+//      if (!(PIND & _BV(PD2)))
+//      {
+//        if (!inhibit1)
+//        {
+//          voice_state_t newState=voiceState;
+//          debounce1=4000;
+//          inhibit1=1;
+//          if (voiceState==STOPPED)
+//          {
+//            led(1);
+//            ptt(1);
+//            newState=RUNNING;
+//            seekToTrack(sampleNum);
+//          }
+//          else
+//          {
+//            newState=STOPPED;
+//            ptt(0);
+//            led(0);
+//          }
+//          voiceState=newState;
+//        }
+//      }
+//      else
+//      {
+//        inhibit1=0;
+//      }
+//    }
+//    if (!debounce2)
+//    {
+//      if (!(PIND & _BV(PD3)))
+//      {
+//        if (!inhibit2)
+//        {
+//          debounce2=4000;
+//          inhibit2=1;
+//          sampleNum++;
+//          if (sampleNum==samples)
+//          {
+//            sampleNum=0;
+//          }
+//        }
+//      }
+//      else
+//      {
+//        inhibit2=0;
+//      }
+//    }
   //  OCR1A = spi_transmit_receive (0xff);	//read spi data and send to
   //  _delay_us (25);		//delay between samples (adjust it to play song fast or slow)
   }
