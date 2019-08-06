@@ -114,14 +114,14 @@ int main()
   spi_init();			//init spi. MODE 3
   pwm_init();			//fast pwm, prescaler 1
 
-  ledInit();
-  pttInit();
+  //ledInit();
+  //pttInit();
 
   timerInit();
   timerStart();
   
-  PORTD |= _BV(PD2) | _BV(PD3);
-  DDRD &= ~_BV(PD2) | _BV(PD3);
+  //PORTD |= _BV(PD2) | _BV(PD3);
+  //DDRD &= ~_BV(PD2) | _BV(PD3);
 
   _delay_ms(100);
 
