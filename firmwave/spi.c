@@ -4,7 +4,8 @@
 void spi_init()
 {
   deselect_chip ();
-  SPI_DDR = (MOSI_PIN) | (SCK_PIN) | (CS_PIN);
+  SPI_DDR = (MOSI_PIN) | (SCK_PIN);
+  SPI_CS_DDR = (CS_PIN);
   SPI_SCK_HIGH ();
 }
 
