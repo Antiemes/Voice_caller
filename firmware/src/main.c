@@ -59,6 +59,42 @@ void led_set(uint8_t led, uint8_t state)
   }
 }
 
+void button_init()
+{
+  //Inputs, pullup enabled.
+
+  //A3, PF4
+  DDRF &= ~_BV(PF4);
+  PORTF |= _BV(PF4);
+
+  //A2, PF5
+  DDRF &= ~_BV(PF5);
+  PORTF |= _BV(PF5);
+
+  //A0, PF7
+  DDRF &= ~_BV(PF7);
+  PORTF |= _BV(PF7);
+
+  //D9,  PB5
+  DDRB &= ~_BV(PB5);
+  PORTB |= _BV(PB5);
+
+  //D8,  PB4
+  DDRB &= ~_BV(PB4);
+  PORTB |= _BV(PB4);
+}
+
+void relay_init()
+{
+  //D4, PD4
+  PORTD &= ~_BV(PD4);
+  DDRD |= _BV(PD4);
+
+  //D5, PC6
+  PORTC &= ~_BV(PC6);
+  DDRC |= _BV(PC6);
+}
+
 //initialize fast PWM with prescaler 1 at PB1
 void pwm_init()
 {
