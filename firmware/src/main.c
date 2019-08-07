@@ -1,5 +1,4 @@
 #include <avr/io.h>
-#define F_CPU 16000000
 #include <util/delay.h>
 #include <avr/power.h>
 #include <avr/interrupt.h>
@@ -23,6 +22,42 @@ typedef enum
 } voice_state_t;
 
 volatile voice_state_t voiceState=STOPPED;
+
+void led_init()
+{
+  //LEDs: PD7, PE6
+  PORTD &= ~_BV(PD7);
+  DDRD |= _BV(PD7);
+
+  PORTE &= ~_BV(PE6);
+  DDRE |= _BV(PE6);
+}
+
+void led_set(uint8_t led, uint8_t state)
+{
+  if (led==0)
+  {
+    if (state==0)
+    {
+      PORTD &= ~_BV(PD7);
+    }
+    else
+    {
+      PORTD |= _BV(PD7);
+    }
+  }
+  else if (led==1)
+  {
+    if (state==0)
+    {
+      PORTE &= ~_BV(PE6);
+    }
+    else
+    {
+      PORTE |= _BV(PE6);
+    }
+  }
+}
 
 //initialize fast PWM with prescaler 1 at PB1
 void pwm_init()
