@@ -23,7 +23,7 @@ typedef enum
 
 volatile voice_state_t voiceState=STOPPED;
 
-void led_init()
+void ledInit()
 {
   //LEDs: PD7, PE6
   PORTD &= ~_BV(PD7);
@@ -33,7 +33,7 @@ void led_init()
   DDRE |= _BV(PE6);
 }
 
-void led_set(uint8_t led, uint8_t state)
+void ledSet(uint8_t led, uint8_t state)
 {
   if (led==0)
   {
@@ -59,7 +59,7 @@ void led_set(uint8_t led, uint8_t state)
   }
 }
 
-void button_init()
+void buttonInit()
 {
   //Inputs, pullup enabled.
 
@@ -84,7 +84,7 @@ void button_init()
   PORTB |= _BV(PB4);
 }
 
-void relay_init()
+void relayInit()
 {
   //D4, PD4
   PORTD &= ~_BV(PD4);
@@ -153,28 +153,6 @@ void timerStop()
 
 //=====================================================================
 
-void led(uint8_t state);
-void ledInit()
-{
-  DDRB |= _BV(PB0);
-  led(0);
-}
-
-void led(uint8_t state)
-{
-  if (state)
-  {
-    PORTB |= _BV(PB0);
-  }
-  else
-  {
-    PORTB &= ~_BV(PB0);
-  }
-}
-
-
-//=====================================================================
-
 void seekToTrack(uint8_t track)
 {
   initRead(sampleStart[track]);
@@ -185,85 +163,77 @@ void seekToTrack(uint8_t track)
 
 int main()
 {
+  USBCON = 0;  // Disable USB interrupts
   spi_init();			//init spi. MODE 3
   pwm_init();			//fast pwm, prescaler 1
+  buttonInit();
+  ledInit();
+  relayInit();
+  seekToTrack(0);
 
-  //ledInit();
-  //pttInit();
+  ledInit();
+  pttInit();
 
-  //timerInit();
-  //timerStart();
-  
-  //PORTD |= _BV(PD2) | _BV(PD3);
-  //DDRD &= ~_BV(PD2) | _BV(PD3);
+  timerInit();
+  timerStart();
 
-  _delay_ms(100);
-
-  while(1)
-  {
-    PORTB |= _BV(PB6);
-    _delay_ms(1);
-    PORTB &= ~_BV(PB6);
-    _delay_ms(1);
-  }
+  ledSet(0, 1);
+  _delay_ms(500);
+  ledSet(0, 0);
 
   while(1)
   {
-    if (voiceState!=RUNNING)
+    if (!debounce1)
     {
-      voiceState=RUNNING;
+      if (!(PINF & _BV(PF4)))
+      {
+        if (!inhibit1)
+        {
+          voice_state_t newState=voiceState;
+          debounce1=4000;
+          inhibit1=1;
+          if (voiceState==STOPPED)
+          {
+            ledSet(0, 1);
+            ptt(1);
+            newState=RUNNING;
+            seekToTrack(sampleNum);
+          }
+          else
+          {
+            newState=STOPPED;
+            ptt(0);
+            ledSet(0, 0);
+          }
+          voiceState=newState;
+        }
+      }
+      else
+      {
+        inhibit1=0;
+      }
     }
-//    if (!debounce1)
-//    {
-//      if (!(PIND & _BV(PD2)))
-//      {
-//        if (!inhibit1)
-//        {
-//          voice_state_t newState=voiceState;
-//          debounce1=4000;
-//          inhibit1=1;
-//          if (voiceState==STOPPED)
-//          {
-//            led(1);
-//            ptt(1);
-//            newState=RUNNING;
-//            seekToTrack(sampleNum);
-//          }
-//          else
-//          {
-//            newState=STOPPED;
-//            ptt(0);
-//            led(0);
-//          }
-//          voiceState=newState;
-//        }
-//      }
-//      else
-//      {
-//        inhibit1=0;
-//      }
-//    }
-//    if (!debounce2)
-//    {
-//      if (!(PIND & _BV(PD3)))
-//      {
-//        if (!inhibit2)
-//        {
-//          debounce2=4000;
-//          inhibit2=1;
-//          sampleNum++;
-//          if (sampleNum==samples)
-//          {
-//            sampleNum=0;
-//          }
-//        }
-//      }
-//      else
-//      {
-//        inhibit2=0;
-//      }
-//    }
-  //  OCR1A = spi_transmit_receive (0xff);	//read spi data and send to
+    if (!debounce2)
+    {
+      if (!(PINF & _BV(PF5)))
+      {
+        if (!inhibit2)
+        {
+          debounce2=4000;
+          inhibit2=1;
+          sampleNum++;
+          if (sampleNum==samples)
+          {
+            sampleNum=0;
+          }
+        }
+      }
+      else
+      {
+        inhibit2=0;
+      }
+    }
+  //  OCR1B = spi_transmit_receive (0xff);	//read spi data and send to
   //  _delay_us (25);		//delay between samples (adjust it to play song fast or slow)
   }
 }
@@ -273,20 +243,30 @@ int main()
 volatile uint8_t intCnt=0;
 ISR(TIMER0_OVF_vect)
 {
+  static volatile uint16_t ct=0;
+  ct++;
   intCnt++;
+  if (ct & 32768)
+  {
+    ledSet(1, 1);
+  }
+  else
+  {
+    ledSet(1, 0);
+  }
   if (intCnt==2)
   {
     voice_state_t newState=voiceState;
     if (voiceState==RUNNING)
     {
-      OCR1A = readSample(); //read spi data and send to
+      OCR1B = readSample(); //read spi data and send to
       if (sampleCounter==0)
       {
         seekToTrack(sampleNum);
         newState=WAITING;
         waitCycles=120000;
         ptt(0);
-        led(0);
+        ledSet(0, 0);
       }
     }
     else if (voiceState==WAITING)
@@ -296,7 +276,7 @@ ISR(TIMER0_OVF_vect)
       {
         newState=RUNNING;
         ptt(1);
-        led(1);
+        ledSet(0, 1);
       }
     }
     voiceState=newState;
