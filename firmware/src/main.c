@@ -95,6 +95,27 @@ void relay_init()
   DDRC |= _BV(PC6);
 }
 
+void pttInit()
+{
+  //D2, PD1
+  PORTD &= ~_BV(PD1);
+  DDRD |= _BV(PD1);
+
+  //A1, PTT sense, TODO: ADC init
+}
+
+void ptt(uint8_t state)
+{
+  if (state==0)
+  {
+    PORTD &= ~_BV(PD1);
+  }
+  else
+  {
+    PORTD |= _BV(PD1);
+  }
+}
+
 //initialize fast PWM with prescaler 1 at PB1
 void pwm_init()
 {
@@ -148,25 +169,6 @@ void led(uint8_t state)
   else
   {
     PORTB &= ~_BV(PB0);
-  }
-}
-
-void ptt(uint8_t state);
-void pttInit()
-{ // PD4
-  DDRD |= _BV(PD4);
-  ptt(0);
-}
-
-void ptt(uint8_t state)
-{
-  if (state)
-  {
-    PORTD |= _BV(PD4);
-  }
-  else
-  {
-    PORTD &= ~_BV(PD4);
   }
 }
 
