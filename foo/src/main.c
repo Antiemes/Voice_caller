@@ -27,9 +27,10 @@ volatile voice_state_t voiceState=STOPPED;
 //initialize fast PWM with prescaler 1 at PB1
 void pwm_init()
 {
+  // PB6, OC1B
   DDRB |= _BV(PB6);
-//	TCCR1A |= _BV(COM1A1) | _BV(WGM10);
-//  TCCR1B |= _BV(CS10) | _BV(WGM12);
+	TCCR1A |= _BV(COM1B1) | _BV(WGM10);
+  TCCR1B |= _BV(CS10) | _BV(WGM12); // With WGM12: Fast PWM, without WGM12: Normal PWM
 }
 
 //=====================================================================
