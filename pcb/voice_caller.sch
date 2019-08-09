@@ -9913,15 +9913,15 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
-<part name="C4" library="rcl" deviceset="C-EU" device="C1206K" value="100nF"/>
+<part name="C4" library="rcl" deviceset="C-EU" device="C1206K" value="100uF"/>
 <part name="R3" library="rcl" deviceset="R-EU_" device="M1206" value="3k3"/>
 <part name="C5" library="rcl" deviceset="C-EU" device="C1206K" value="10nF"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="R4" library="rcl" deviceset="R-TRIMM" device="T93XB"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="C6" library="rcl" deviceset="C-EU" device="C1206K" value="100nF"/>
-<part name="R5" library="rcl" deviceset="R-EU_" device="M1206" value="100k"/>
-<part name="R6" library="rcl" deviceset="R-EU_" device="M1206" value="470"/>
+<part name="R5" library="rcl" deviceset="R-EU_" device="M1206" value="4k7"/>
+<part name="R6" library="rcl" deviceset="R-EU_" device="M1206" value="NP"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="C7" library="rcl" deviceset="C-EU" device="C1206K" value="100nF"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
