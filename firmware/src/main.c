@@ -21,6 +21,12 @@ typedef enum
   WAITING,
 } voice_state_t;
 
+typedef enum
+{
+  RELAY_RX,
+  RELAY_TX,
+} relay_state_t;
+
 volatile voice_state_t voiceState=STOPPED;
 
 void ledInit()
@@ -95,19 +101,19 @@ void relayInit()
   DDRC |= _BV(PC6);
 }
 
-void relay(uint8_t state)
+void relay(relay_state_t state)
 {
-  if (state==0)
-  {
-    PORTD |=  _BV(PD4);
-    _delay_ms(10);
-    PORTD &= ~_BV(PD4);
-  }
-  else
+  if (state==RELAY_RX)
   {
     PORTC |=  _BV(PC6);
     _delay_ms(10);
     PORTC &= ~_BV(PC6);
+  }
+  else if (state==RELAY_TX)
+  {
+    PORTD |=  _BV(PD4);
+    _delay_ms(10);
+    PORTD &= ~_BV(PD4);
   }
 }
 
@@ -197,6 +203,8 @@ int main()
   _delay_ms(500);
   ledSet(0, 0);
 
+  relay(RELAY_RX);
+
   while(1)
   {
     if (!debounce1)
@@ -211,6 +219,7 @@ int main()
           if (voiceState==STOPPED)
           {
             ledSet(0, 1);
+            relay(RELAY_TX);
             ptt(1);
             newState=RUNNING;
             seekToTrack(sampleNum);
@@ -218,6 +227,7 @@ int main()
           else
           {
             newState=STOPPED;
+            relay(RELAY_RX);
             ptt(0);
             ledSet(0, 0);
           }
