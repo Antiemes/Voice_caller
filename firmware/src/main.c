@@ -95,6 +95,22 @@ void relayInit()
   DDRC |= _BV(PC6);
 }
 
+void relay(uint8_t state)
+{
+  if (state==0)
+  {
+    PORTD |=  _BV(PD4);
+    _delay_ms(10);
+    PORTD &= ~_BV(PD4);
+  }
+  else
+  {
+    PORTC |=  _BV(PC6);
+    _delay_ms(10);
+    PORTC &= ~_BV(PC6);
+  }
+}
+
 void pttInit()
 {
   //D2, PD1
