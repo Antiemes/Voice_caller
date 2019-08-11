@@ -152,9 +152,12 @@ void pwm_init()
 void timerInit()
 {
   cli();
-	TCCR0A=0;
+  OCR0A=249; // Counting up to 250, generates 64000 interrupts / sec
+  //OCR0B=250; // Counting up to 250, generates 64000 interrupts / sec
+	TCCR0A=_BV(WGM01); // CTC mode
   //TCCR0B=_BV(CS01) | _BV(CS00);
-  TCCR0B=_BV(CS00);
+  TCCR0B=_BV(CS00); // No prescaler
+  //TCCR0B=_BV(CS01); // div8 prescaler
   sei();
 }
 
@@ -162,7 +165,8 @@ void timerStart()
 {
   cli();
   TCNT0=0;
-  TIMSK0 |= _BV(TOIE1);
+  //TIMSK0 |= _BV(TOIE1);
+  TIMSK0 |= _BV(OCIE0A);
   sei();
 }
 
@@ -267,20 +271,10 @@ int main()
 //=====================================================================
 
 volatile uint8_t intCnt=0;
-ISR(TIMER0_OVF_vect)
+//ISR(TIMER0_OVF_vect)
+ISR(TIMER0_COMPA_vect) //64 kHz
 {
-  static volatile uint16_t ct=0;
-  ct++;
-  intCnt++;
-  if (ct & 32768)
-  {
-    ledSet(1, 1);
-  }
-  else
-  {
-    ledSet(1, 0);
-  }
-  if (intCnt==2)
+  if (intCnt==1)
   {
     voice_state_t newState=voiceState;
     if (voiceState==RUNNING)
@@ -316,5 +310,9 @@ ISR(TIMER0_OVF_vect)
       debounce2--;
     }
     intCnt=0;
+  }
+  else
+  {
+    intCnt++;
   }
 }
