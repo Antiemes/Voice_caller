@@ -7473,93 +7473,6 @@ Source: &lt;a href="http://www.bourns.com/pdfs/3314.pdf"&gt; Data sheet&lt;/a&gt
 </deviceset>
 </devicesets>
 </library>
-<library name="memory-atmel">
-<description>&lt;b&gt;Atmel Memory Devices&lt;/b&gt;&lt;p&gt; 
-&lt;p&gt;THIS LIBRARY IS PROVIDED AS IS AND WITHOUT WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED.&lt;br&gt;
-USE AT YOUR OWN RISK!&lt;p&gt;
-&lt;author&gt;Copyright (C) 2008, Bob Starr&lt;br&gt; http://www.bobstarr.net&lt;br&gt;&lt;/author&gt;</description>
-<packages>
-<package name="SO08-8S2">
-<description>&lt;b&gt;SMALL OUTLINE INTEGRATED CIRCUIT&lt;/b&gt;&lt;p&gt;
-8S2 Package (EIAJ), 5.4 mm body</description>
-<wire x1="2.667" y1="2.667" x2="2.667" y2="-2.667" width="0.2032" layer="51"/>
-<wire x1="2.667" y1="-2.667" x2="-2.667" y2="-2.667" width="0.2032" layer="51"/>
-<wire x1="-2.667" y1="-2.667" x2="-2.667" y2="2.667" width="0.2032" layer="51"/>
-<wire x1="-2.667" y1="2.667" x2="2.667" y2="2.667" width="0.2032" layer="51"/>
-<wire x1="-2.667" y1="2.286" x2="2.667" y2="2.286" width="0.2032" layer="21"/>
-<wire x1="2.667" y1="2.286" x2="2.667" y2="-2.286" width="0.2032" layer="21"/>
-<wire x1="2.667" y1="-2.286" x2="-2.667" y2="-2.286" width="0.2032" layer="21"/>
-<wire x1="-2.667" y1="-2.286" x2="-2.667" y2="2.286" width="0.2032" layer="21"/>
-<wire x1="-3.175" y1="5.08" x2="3.175" y2="5.08" width="0.1998" layer="39"/>
-<wire x1="-3.175" y1="-5.08" x2="-3.175" y2="5.08" width="0.1998" layer="39"/>
-<wire x1="-3.175" y1="-5.08" x2="3.175" y2="-5.08" width="0.1998" layer="39"/>
-<wire x1="3.175" y1="-5.08" x2="3.175" y2="5.08" width="0.1998" layer="39"/>
-<circle x="-1.905" y="-1.5738" radius="0.3175" width="0" layer="21"/>
-<smd name="2" x="-0.635" y="-3.725" dx="0.6" dy="2.2" layer="1"/>
-<smd name="7" x="-0.635" y="3.725" dx="0.6" dy="2.2" layer="1"/>
-<smd name="1" x="-1.905" y="-3.725" dx="0.6" dy="2.2" layer="1"/>
-<smd name="3" x="0.635" y="-3.725" dx="0.6" dy="2.2" layer="1"/>
-<smd name="4" x="1.905" y="-3.725" dx="0.6" dy="2.2" layer="1"/>
-<smd name="8" x="-1.905" y="3.725" dx="0.6" dy="2.2" layer="1"/>
-<smd name="6" x="0.635" y="3.725" dx="0.6" dy="2.2" layer="1"/>
-<smd name="5" x="1.905" y="3.725" dx="0.6" dy="2.2" layer="1"/>
-<text x="-3.175" y="-2.8575" size="1.016" layer="25" ratio="18" rot="R90">&gt;NAME</text>
-<text x="3.81" y="-2.8575" size="0.8128" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
-<rectangle x1="-2.1501" y1="-4.195" x2="-1.6599" y2="-2.6751" layer="51"/>
-<rectangle x1="-0.8801" y1="-4.195" x2="-0.3899" y2="-2.6751" layer="51"/>
-<rectangle x1="0.3899" y1="-4.195" x2="0.8801" y2="-2.6751" layer="51"/>
-<rectangle x1="1.6599" y1="-4.195" x2="2.1501" y2="-2.6751" layer="51"/>
-<rectangle x1="1.6599" y1="2.6751" x2="2.1501" y2="4.195" layer="51"/>
-<rectangle x1="0.3899" y1="2.6751" x2="0.8801" y2="4.195" layer="51"/>
-<rectangle x1="-0.8801" y1="2.6751" x2="-0.3899" y2="4.195" layer="51"/>
-<rectangle x1="-2.1501" y1="2.6751" x2="-1.6599" y2="4.195" layer="51"/>
-</package>
-</packages>
-<symbols>
-<symbol name="AT45">
-<wire x1="-10.16" y1="5.08" x2="-10.16" y2="-7.62" width="0.4064" layer="94"/>
-<wire x1="-10.16" y1="-7.62" x2="10.16" y2="-7.62" width="0.4064" layer="94"/>
-<wire x1="10.16" y1="-7.62" x2="10.16" y2="5.08" width="0.4064" layer="94"/>
-<wire x1="10.16" y1="5.08" x2="-10.16" y2="5.08" width="0.4064" layer="94"/>
-<text x="-10.16" y="6.35" size="1.778" layer="95">&gt;NAME</text>
-<text x="-10.16" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="!CS!" x="-15.24" y="2.54" length="middle" direction="in"/>
-<pin name="SCK" x="-15.24" y="0" length="middle" direction="in"/>
-<pin name="SI" x="-15.24" y="-2.54" length="middle" direction="in"/>
-<pin name="SO" x="-15.24" y="-5.08" length="middle" direction="out"/>
-<pin name="GND" x="15.24" y="-5.08" length="middle" direction="pwr" rot="R180"/>
-<pin name="!RESET!" x="15.24" y="2.54" length="middle" direction="in" rot="R180"/>
-<pin name="!WP!" x="15.24" y="0" length="middle" direction="in" rot="R180"/>
-<pin name="VCC" x="15.24" y="-2.54" length="middle" direction="pwr" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="AT45DB321D-S" prefix="U">
-<description>&lt;b&gt;FLASH MEMORY&lt;/b&gt;&lt;p&gt;
-32-megabit, 2.7-volt, DataFlash®</description>
-<gates>
-<gate name="G$1" symbol="AT45" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SO08-8S2">
-<connects>
-<connect gate="G$1" pin="!CS!" pad="4"/>
-<connect gate="G$1" pin="!RESET!" pad="3"/>
-<connect gate="G$1" pin="!WP!" pad="5"/>
-<connect gate="G$1" pin="GND" pad="7"/>
-<connect gate="G$1" pin="SCK" pad="2"/>
-<connect gate="G$1" pin="SI" pad="1"/>
-<connect gate="G$1" pin="SO" pad="8"/>
-<connect gate="G$1" pin="VCC" pad="6"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="linear">
 <description>&lt;b&gt;Linear Devices&lt;/b&gt;&lt;p&gt;
 Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&gt;
@@ -9884,6 +9797,163 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="SparkFun-IC-Memory">
+<description>&lt;h3&gt;SparkFun Memory ICs&lt;/h3&gt;
+This library contains memory ICs.
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="SO08">
+<description>SOIC, 0.15 inch width</description>
+<wire x1="2.3368" y1="1.9463" x2="-2.3368" y2="1.9463" width="0.2032" layer="21"/>
+<wire x1="2.4368" y1="-1.9463" x2="2.7178" y2="-1.5653" width="0.2032" layer="21" curve="90"/>
+<wire x1="-2.7178" y1="1.4653" x2="-2.3368" y2="1.9463" width="0.2032" layer="21" curve="-90.023829"/>
+<wire x1="2.3368" y1="1.9463" x2="2.7178" y2="1.5653" width="0.2032" layer="21" curve="-90.030084"/>
+<wire x1="-2.7178" y1="-1.6653" x2="-2.3368" y2="-1.9463" width="0.2032" layer="21" curve="90.060185"/>
+<wire x1="-2.3368" y1="-1.9463" x2="2.4368" y2="-1.9463" width="0.2032" layer="21"/>
+<wire x1="2.7178" y1="-1.5653" x2="2.7178" y2="1.5653" width="0.2032" layer="21"/>
+<wire x1="-2.667" y1="0.6096" x2="-2.667" y2="-0.6604" width="0.2032" layer="21" curve="-180"/>
+<wire x1="-2.7178" y1="1.4526" x2="-2.7178" y2="0.6096" width="0.2032" layer="21"/>
+<wire x1="-2.7178" y1="-1.6653" x2="-2.7178" y2="-0.6604" width="0.2032" layer="21"/>
+<rectangle x1="-2.159" y1="-3.302" x2="-1.651" y2="-2.2733" layer="51"/>
+<rectangle x1="-0.889" y1="-3.302" x2="-0.381" y2="-2.2733" layer="51"/>
+<rectangle x1="0.381" y1="-3.302" x2="0.889" y2="-2.2733" layer="51"/>
+<rectangle x1="1.651" y1="-3.302" x2="2.159" y2="-2.2733" layer="51"/>
+<rectangle x1="-0.889" y1="2.286" x2="-0.381" y2="3.302" layer="51"/>
+<rectangle x1="0.381" y1="2.286" x2="0.889" y2="3.302" layer="51"/>
+<rectangle x1="1.651" y1="2.286" x2="2.159" y2="3.302" layer="51"/>
+<smd name="1" x="-1.905" y="-2.8" dx="0.6" dy="1.2" layer="1"/>
+<smd name="2" x="-0.635" y="-2.8" dx="0.6" dy="1.2" layer="1"/>
+<smd name="3" x="0.635" y="-2.8" dx="0.6" dy="1.2" layer="1"/>
+<smd name="4" x="1.905" y="-2.8" dx="0.6" dy="1.2" layer="1"/>
+<smd name="5" x="1.905" y="2.8" dx="0.6" dy="1.2" layer="1"/>
+<smd name="6" x="0.635" y="2.8" dx="0.6" dy="1.2" layer="1"/>
+<smd name="7" x="-0.635" y="2.8" dx="0.6" dy="1.2" layer="1"/>
+<smd name="8" x="-1.905" y="2.8" dx="0.6" dy="1.2" layer="1"/>
+<text x="-3.175" y="0" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center">&gt;NAME</text>
+<text x="3.81" y="0" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="bottom-center">&gt;VALUE</text>
+<rectangle x1="-2.159" y1="2.286" x2="-1.651" y2="3.302" layer="51"/>
+<polygon width="0.002540625" layer="21">
+<vertex x="-2.69875" y="-2.38125" curve="90"/>
+<vertex x="-3.01625" y="-2.06375" curve="90"/>
+<vertex x="-3.33375" y="-2.38125" curve="90"/>
+<vertex x="-3.01625" y="-2.69875" curve="90"/>
+</polygon>
+</package>
+<package name="SO08-EIAJ">
+<description>Fits EIAJ packages (wide version of the SOIC-8).</description>
+<wire x1="-2.362" y1="-2.565" x2="2.362" y2="-2.565" width="0.1524" layer="51"/>
+<wire x1="2.362" y1="-2.565" x2="2.362" y2="2.5396" width="0.2032" layer="21"/>
+<wire x1="2.362" y1="2.5396" x2="-2.362" y2="2.5396" width="0.1524" layer="51"/>
+<wire x1="-2.362" y1="2.5396" x2="-2.362" y2="-2.565" width="0.2032" layer="21"/>
+<smd name="1" x="-1.905" y="-3.3782" dx="0.6096" dy="2.2098" layer="1"/>
+<smd name="2" x="-0.635" y="-3.3782" dx="0.6096" dy="2.2098" layer="1"/>
+<smd name="3" x="0.635" y="-3.3782" dx="0.6096" dy="2.2098" layer="1"/>
+<smd name="4" x="1.905" y="-3.3782" dx="0.6096" dy="2.2098" layer="1"/>
+<smd name="5" x="1.905" y="3.3528" dx="0.6096" dy="2.2098" layer="1"/>
+<smd name="6" x="0.635" y="3.3528" dx="0.6096" dy="2.2098" layer="1"/>
+<smd name="7" x="-0.635" y="3.3528" dx="0.6096" dy="2.2098" layer="1"/>
+<smd name="8" x="-1.905" y="3.3528" dx="0.6096" dy="2.2098" layer="1"/>
+<rectangle x1="-2.0828" y1="-3.6322" x2="-1.7272" y2="-2.6162" layer="51"/>
+<rectangle x1="-0.8128" y1="-3.6322" x2="-0.4572" y2="-2.6162" layer="51"/>
+<rectangle x1="0.4572" y1="-3.6322" x2="0.8128" y2="-2.6162" layer="51"/>
+<rectangle x1="1.7272" y1="-3.6322" x2="2.0828" y2="-2.6162" layer="51"/>
+<rectangle x1="-2.0828" y1="2.5908" x2="-1.7272" y2="3.6068" layer="51"/>
+<rectangle x1="-0.8128" y1="2.5908" x2="-0.4572" y2="3.6068" layer="51"/>
+<rectangle x1="0.4572" y1="2.5908" x2="0.8128" y2="3.6068" layer="51"/>
+<rectangle x1="1.7272" y1="2.5908" x2="2.0828" y2="3.6068" layer="51"/>
+<text x="-2.8575" y="0" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center">&gt;NAME</text>
+<text x="3.4925" y="0" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="bottom-center">&gt;VALUE</text>
+<polygon width="0.002540625" layer="21">
+<vertex x="-2.69875" y="-3.01625" curve="90"/>
+<vertex x="-3.01625" y="-2.69875" curve="90"/>
+<vertex x="-3.33375" y="-3.01625" curve="90"/>
+<vertex x="-3.01625" y="-3.33375" curve="90"/>
+</polygon>
+</package>
+</packages>
+<symbols>
+<symbol name="SPI_FLASH">
+<description>&lt;h3&gt; Flash &lt;/h3&gt;</description>
+<wire x1="-10.16" y1="5.08" x2="-10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
+<text x="-10.16" y="5.334" size="1.778" layer="95" font="vector">&gt;NAME</text>
+<text x="-10.16" y="-7.874" size="1.778" layer="96" font="vector" align="top-left">&gt;VALUE</text>
+<pin name="CS" x="-15.24" y="2.54" length="middle"/>
+<pin name="MISO" x="-15.24" y="0" length="middle"/>
+<pin name="WP" x="-15.24" y="-2.54" length="middle"/>
+<pin name="GND" x="-15.24" y="-5.08" length="middle" direction="pwr"/>
+<pin name="VCC" x="15.24" y="2.54" length="middle" direction="pwr" rot="R180"/>
+<pin name="HOLD" x="15.24" y="0" length="middle" rot="R180"/>
+<pin name="SCK" x="15.24" y="-2.54" length="middle" rot="R180"/>
+<pin name="MOSI" x="15.24" y="-5.08" length="middle" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="SPI_FLASH-X25XX" prefix="U">
+<description>&lt;h3&gt;32M Serial Flash Memory&lt;/h3&gt;
+&lt;p&gt;8pin SPI Flash series x25xx. Works with devices like W25X32 and BR25L32&lt;/p&gt;
+&lt;li&gt;&lt;a href="http://www.macronix.com/Lists/Datasheet/Attachments/5031/MX25L3206E,%203V,%2032Mb,%20v1.5.pdf"&gt;Datasheet&lt;/a&gt;&lt;/li&gt;
+&lt;/p&gt;
+&lt;h4&gt;SparkFun Products&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/10920"&gt;SparkFun Venus GPS Logger&lt;/a&gt; (GPS-10920)&lt;/li&gt;
+&lt;/ul&gt;</description>
+<gates>
+<gate name="G$1" symbol="SPI_FLASH" x="0" y="0"/>
+</gates>
+<devices>
+<device name="SMD" package="SO08">
+<connects>
+<connect gate="G$1" pin="CS" pad="1"/>
+<connect gate="G$1" pin="GND" pad="4"/>
+<connect gate="G$1" pin="HOLD" pad="7"/>
+<connect gate="G$1" pin="MISO" pad="2"/>
+<connect gate="G$1" pin="MOSI" pad="5"/>
+<connect gate="G$1" pin="SCK" pad="6"/>
+<connect gate="G$1" pin="VCC" pad="8"/>
+<connect gate="G$1" pin="WP" pad="3"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="N/A" constant="no"/>
+<attribute name="VALUE" value="32M SPI Flash" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="SMD1" package="SO08-EIAJ">
+<connects>
+<connect gate="G$1" pin="CS" pad="1"/>
+<connect gate="G$1" pin="GND" pad="4"/>
+<connect gate="G$1" pin="HOLD" pad="7"/>
+<connect gate="G$1" pin="MISO" pad="2"/>
+<connect gate="G$1" pin="MOSI" pad="5"/>
+<connect gate="G$1" pin="SCK" pad="6"/>
+<connect gate="G$1" pin="VCC" pad="8"/>
+<connect gate="G$1" pin="WP" pad="3"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="IC-09109"/>
+<attribute name="VALUE" value="25F32006WSOI" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -9902,7 +9972,6 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="C1" library="rcl" deviceset="C-EU" device="C1206K" value="100nF"/>
 <part name="C2" library="rcl" deviceset="C-EU" device="C1206K" value="100nF"/>
-<part name="IC2" library="memory-atmel" deviceset="AT45DB321D-S" device=""/>
 <part name="C3" library="rcl" deviceset="C-EU" device="C1206K" value="100nF"/>
 <part name="P+1" library="supply1" deviceset="+5V" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
@@ -9955,6 +10024,7 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <part name="R13" library="rcl" deviceset="R-EU_" device="M1206" value="220"/>
 <part name="JP2" library="pinhead" deviceset="PINHD-1X2" device=""/>
 <part name="JP3" library="pinhead" deviceset="PINHD-1X2" device=""/>
+<part name="U1" library="SparkFun-IC-Memory" deviceset="SPI_FLASH-X25XX" device="SMD1" value="25F32006WSOI"/>
 </parts>
 <sheets>
 <sheet>
@@ -9969,7 +10039,6 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <instance part="GND2" gate="1" x="78.74" y="139.7"/>
 <instance part="C1" gate="G$1" x="147.32" y="142.24"/>
 <instance part="C2" gate="G$1" x="78.74" y="149.86"/>
-<instance part="IC2" gate="G$1" x="157.48" y="68.58"/>
 <instance part="C3" gate="G$1" x="167.64" y="142.24"/>
 <instance part="P+1" gate="1" x="167.64" y="149.86"/>
 <instance part="GND3" gate="1" x="167.64" y="132.08"/>
@@ -10025,6 +10094,7 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <instance part="R13" gate="G$1" x="15.24" y="152.4"/>
 <instance part="JP2" gate="G$1" x="2.54" y="167.64" rot="R180"/>
 <instance part="JP3" gate="G$1" x="2.54" y="152.4" rot="R180"/>
+<instance part="U1" gate="G$1" x="157.48" y="86.36"/>
 </instances>
 <busses>
 </busses>
@@ -10071,11 +10141,6 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <pinref part="GND2" gate="1" pin="GND"/>
 <pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="78.74" y1="142.24" x2="78.74" y2="144.78" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="IC2" gate="G$1" pin="GND"/>
-<wire x1="172.72" y1="63.5" x2="175.26" y2="63.5" width="0.1524" layer="91"/>
-<label x="175.26" y="63.5" size="1.016" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="C3" gate="G$1" pin="2"/>
@@ -10219,53 +10284,58 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <label x="10.16" y="149.86" size="0.8128" layer="95" xref="yes"/>
 <pinref part="JP3" gate="G$1" pin="1"/>
 </segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="GND"/>
+<wire x1="142.24" y1="81.28" x2="139.7" y2="81.28" width="0.1524" layer="91"/>
+<label x="139.7" y="81.28" size="0.8128" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="MOSI" class="0">
-<segment>
-<pinref part="IC2" gate="G$1" pin="SI"/>
-<wire x1="142.24" y1="66.04" x2="139.7" y2="66.04" width="0.1524" layer="91"/>
-<label x="139.7" y="66.04" size="1.016" layer="95" rot="R180" xref="yes"/>
-</segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="11(MOSI)"/>
 <wire x1="60.96" y1="132.08" x2="66.04" y2="132.08" width="0.1524" layer="91"/>
 <label x="66.04" y="132.08" size="0.8128" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="MOSI"/>
+<wire x1="172.72" y1="81.28" x2="175.26" y2="81.28" width="0.1524" layer="91"/>
+<label x="175.26" y="81.28" size="0.8128" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="MISO" class="0">
-<segment>
-<pinref part="IC2" gate="G$1" pin="SO"/>
-<wire x1="142.24" y1="63.5" x2="139.7" y2="63.5" width="0.1524" layer="91"/>
-<label x="139.7" y="63.5" size="1.016" layer="95" rot="R180" xref="yes"/>
-</segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="12(MISO)"/>
 <wire x1="60.96" y1="134.62" x2="66.04" y2="134.62" width="0.1524" layer="91"/>
 <label x="66.04" y="134.62" size="0.8128" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="MISO"/>
+<wire x1="142.24" y1="86.36" x2="139.7" y2="86.36" width="0.1524" layer="91"/>
+<label x="139.7" y="86.36" size="0.8128" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="SCK" class="0">
-<segment>
-<pinref part="IC2" gate="G$1" pin="SCK"/>
-<wire x1="142.24" y1="68.58" x2="139.7" y2="68.58" width="0.1524" layer="91"/>
-<label x="139.7" y="68.58" size="1.016" layer="95" rot="R180" xref="yes"/>
-</segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="13(SCK)"/>
 <wire x1="60.96" y1="137.16" x2="66.04" y2="137.16" width="0.1524" layer="91"/>
 <label x="66.04" y="137.16" size="0.8128" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="SCK"/>
+<wire x1="172.72" y1="83.82" x2="175.26" y2="83.82" width="0.1524" layer="91"/>
+<label x="175.26" y="83.82" size="0.8128" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="FLASH_CS" class="0">
-<segment>
-<pinref part="IC2" gate="G$1" pin="!CS!"/>
-<wire x1="142.24" y1="71.12" x2="139.7" y2="71.12" width="0.1524" layer="91"/>
-<label x="139.7" y="71.12" size="1.016" layer="95" rot="R180" xref="yes"/>
-</segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="*3"/>
 <wire x1="38.1" y1="144.78" x2="33.02" y2="144.78" width="0.1524" layer="91"/>
 <label x="33.02" y="144.78" size="0.8128" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="CS"/>
+<wire x1="142.24" y1="88.9" x2="139.7" y2="88.9" width="0.1524" layer="91"/>
+<label x="139.7" y="88.9" size="0.8128" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="PTT" class="0">
@@ -10437,24 +10507,24 @@ BF959 corrected 2008.03.06&lt;br&gt;</description>
 <label x="66.04" y="149.86" size="0.8128" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="IC2" gate="G$1" pin="VCC"/>
-<wire x1="172.72" y1="66.04" x2="175.26" y2="66.04" width="0.1524" layer="91"/>
-<label x="175.26" y="66.04" size="1.016" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="C7" gate="G$1" pin="1"/>
 <wire x1="190.5" y1="71.12" x2="190.5" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
-<pinref part="IC2" gate="G$1" pin="!RESET!"/>
-<wire x1="172.72" y1="71.12" x2="175.26" y2="71.12" width="0.1524" layer="91"/>
-<label x="175.26" y="71.12" size="0.8128" layer="95" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="WP"/>
+<wire x1="142.24" y1="83.82" x2="139.7" y2="83.82" width="0.1524" layer="91"/>
+<label x="139.7" y="83.82" size="0.8128" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="IC2" gate="G$1" pin="!WP!"/>
-<wire x1="172.72" y1="68.58" x2="175.26" y2="68.58" width="0.1524" layer="91"/>
-<label x="175.26" y="68.58" size="0.8128" layer="95" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="HOLD"/>
+<wire x1="172.72" y1="86.36" x2="175.26" y2="86.36" width="0.1524" layer="91"/>
+<label x="175.26" y="86.36" size="0.8128" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="VCC"/>
+<wire x1="172.72" y1="88.9" x2="175.26" y2="88.9" width="0.1524" layer="91"/>
+<label x="175.26" y="88.9" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$6" class="0">
