@@ -10352,6 +10352,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="83.82" y1="76.2" x2="86.36" y2="76.2" width="0.1524" layer="91"/>
 <label x="86.36" y="76.2" size="0.8128" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="A1"/>
+<wire x1="60.96" y1="142.24" x2="66.04" y2="142.24" width="0.1524" layer="91"/>
+<label x="66.04" y="142.24" size="0.8128" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="+8V" class="0">
 <segment>
@@ -10627,14 +10632,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="T1" gate="G$1" pin="E"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="83.82" y1="60.96" x2="83.82" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="63.5" x2="86.36" y2="63.5" width="0.1524" layer="91"/>
-<junction x="83.82" y="63.5"/>
-<label x="86.36" y="63.5" size="0.8128" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="IC1" gate="G$1" pin="A1"/>
-<wire x1="60.96" y1="142.24" x2="66.04" y2="142.24" width="0.1524" layer="91"/>
-<label x="66.04" y="142.24" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="BUTTON3" class="0">
