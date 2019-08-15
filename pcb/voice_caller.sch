@@ -16629,6 +16629,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R15" library="rcl" deviceset="R-EU_" device="M1206" value="220"/>
 <part name="R16" library="rcl" deviceset="R-EU_" device="M1206" value="220"/>
 <part name="C11" library="rcl" deviceset="CPOL-EU" device="E2.5-6"/>
+<part name="GND26" library="supply1" deviceset="GND" device=""/>
+<part name="C4" library="rcl" deviceset="CPOL-EU" device="E2.5-6"/>
 </parts>
 <sheets>
 <sheet>
@@ -16714,6 +16716,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="R15" gate="G$1" x="-91.44" y="121.92" rot="R90"/>
 <instance part="R16" gate="G$1" x="-91.44" y="104.14" rot="R90"/>
 <instance part="C11" gate="G$1" x="73.66" y="109.22" rot="R90"/>
+<instance part="GND26" gate="1" x="-68.58" y="91.44"/>
+<instance part="C4" gate="G$1" x="-68.58" y="106.68"/>
 </instances>
 <busses>
 </busses>
@@ -16939,6 +16943,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="GND25" gate="1" pin="GND"/>
 <wire x1="-91.44" y1="93.98" x2="-91.44" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="R16" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="GND26" gate="1" pin="GND"/>
+<pinref part="C4" gate="G$1" pin="-"/>
+<wire x1="-68.58" y1="93.98" x2="-68.58" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -17438,6 +17447,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-91.44" y1="111.76" x2="-91.44" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="-86.36" y1="111.76" x2="-91.44" y2="111.76" width="0.1524" layer="91"/>
 <junction x="-91.44" y="111.76"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="C4" gate="G$1" pin="+"/>
+<pinref part="IC2" gate="G$1" pin="BYPASS"/>
+<wire x1="-68.58" y1="109.22" x2="-68.58" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
