@@ -55,8 +55,11 @@ uint32_t waitCycles=0;
 uint8_t buf[BUFSIZE];
 uint16_t bufpos=0;
 volatile uint16_t ledCounter=0;
-volatile uint8_t ledFlag=0;
+volatile uint16_t ADCCounter=0;
+volatile uint8_t ledFlag=0, ADCFlag=0;
 const uint16_t ledTimeout=8192;
+const uint16_t ADCTimeout=256;
+volatile uint8_t pttOn=0;
 
 volatile uint16_t debounce1=0, debounce2=0;
 uint8_t inhibit1=0, inhibit2=0;
@@ -112,6 +115,13 @@ void ledSet(uint8_t led, uint8_t state)
   }
 }
 
+void ledBlink(uint8_t led)
+{
+  volatile static uint8_t state[2]={0, 0};
+  state[led]=1-state[led];
+  ledSet(led, state[led]);
+}
+
 void buttonInit(void)
 {
   //Inputs, pullup enabled.
@@ -135,6 +145,46 @@ void buttonInit(void)
   //D8,  PB4
   DDRB &= ~_BV(PB4);
   PORTB |= _BV(PB4);
+}
+
+void ADCInit(void)
+{
+  //PTT sense: A1, PF6, ADC6
+  //PORTF &= ~_BV(PF6); //No pullup
+  DDRF  &= ~_BV(PF6); //Input
+  
+  //PORTF |= _BV(PF6); //No pullup
+  //DDRF  |= _BV(PF6); //Input
+
+  //ADCSRA
+  //  ADPS[2:0]=1 --> 128 prescaler, 125 kHz clock
+  //  ADEN: enable
+  //  ADSC: start conversion
+  //ADCH, ADCL: result
+  ADMUX=0xc6; // 11000110 //2.56V ref, right adjust, 
+  ADCSRA=0x87; // 10000111 //enable, don't start, disable and clear interrupt, 128 prescaler
+  ADCSRB=0; //No high speed mode
+  DIDR0=0x40; // Disable input buffer for this pin
+}
+
+void ADCStart(void)
+{
+  ADCSRA |= _BV(ADSC);
+}
+
+uint8_t ADCDone(void)
+{
+  return (ADCSRA & _BV(ADIF)) > 0;
+}
+
+void ADCClear(void)
+{
+  ADCSRA &= ~_BV(ADIF);
+}
+
+uint16_t ADCRes(void)
+{
+  return ADCL+((uint16_t)ADCH<<8);
 }
 
 void relayInit(void)
@@ -175,6 +225,7 @@ void pttInit(void)
 
 void ptt(uint8_t state)
 {
+  pttOn=state;
   if (state==0)
   {
     PORTD &= ~_BV(PD1);
@@ -362,6 +413,7 @@ int main(void)
   buttonInit();
   ledInit();
   relayInit();
+  ADCInit();
   seekToTrack(0);
 
   ledInit();
@@ -376,9 +428,6 @@ int main(void)
 	
   CDC_Device_CreateStream(&VirtualSerial_CDC_Interface, &USBSerialStream);
 	GlobalInterruptEnable();
-
-  //  ReportString = "Hello, World!\n";
-	//  CDC_Device_SendString(&VirtualSerial_CDC_Interface, ReportString);
 
   timerStart();
 
@@ -534,6 +583,27 @@ int main(void)
         ledStep=0;
       }
     }
+    if (ADCFlag)
+    {
+      ADCStart();
+    }
+    if (ADCDone())
+    {
+      uint16_t res;
+      res=ADCRes(); //Mic PTT: 10 (24 mV), our PTT: 33 (83 mV)
+      ADCClear();
+      //send_byte_hex(res >> 8);
+      //send_byte_hex(res & 0xff);
+      //send_lf();
+      if (res<21 && voiceState!=STOPPED)
+      {
+        //ledBlink(0);
+        voiceState=STOPPED;
+        relay(RELAY_RX);
+        ptt(0);
+        ledSet(0, 0);
+      }
+    }
   }
 }
 
@@ -551,6 +621,15 @@ ISR(TIMER0_COMPA_vect) //64 kHz
   {
     ledCounter=ledTimeout;
     ledFlag=1;
+  }
+  if (ADCCounter>0)
+  {
+    ADCCounter--;
+  }
+  else
+  {
+    ADCCounter=ADCTimeout;
+    ADCFlag=1;
   }
   if (intCnt==1)
   {
