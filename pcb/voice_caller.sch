@@ -18696,6 +18696,11 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="C12" library="rcl" deviceset="C-EU" device="C1206K" value="100nF"/>
 <part name="D1" library="diode" deviceset="DIODE-" device="SOD80C"/>
 <part name="GND27" library="supply1" deviceset="GND" device=""/>
+<part name="C13" library="rcl" deviceset="C-EU" device="C1206K" value="10nF"/>
+<part name="C14" library="rcl" deviceset="C-EU" device="C1206K" value="10nF"/>
+<part name="C15" library="rcl" deviceset="C-EU" device="C1206K" value="10nF"/>
+<part name="C16" library="rcl" deviceset="C-EU" device="C1206K" value="10nF"/>
+<part name="C17" library="rcl" deviceset="C-EU" device="C1206K" value="10nF"/>
 </parts>
 <sheets>
 <sheet>
@@ -18787,6 +18792,11 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <instance part="C12" gate="G$1" x="-81.28" y="7.62" rot="R180"/>
 <instance part="D1" gate="G$1" x="-73.66" y="7.62" rot="R270"/>
 <instance part="GND27" gate="1" x="-81.28" y="-2.54"/>
+<instance part="C13" gate="G$1" x="-15.24" y="99.06"/>
+<instance part="C14" gate="G$1" x="5.08" y="99.06"/>
+<instance part="C15" gate="G$1" x="22.86" y="99.06"/>
+<instance part="C16" gate="G$1" x="5.08" y="129.54"/>
+<instance part="C17" gate="G$1" x="-15.24" y="129.54"/>
 </instances>
 <busses>
 </busses>
@@ -18867,6 +18877,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="-20.32" y1="119.38" x2="-20.32" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="S1" gate="1" pin="P1"/>
 <wire x1="-20.32" y1="124.46" x2="-17.78" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="C17" gate="G$1" pin="2"/>
+<wire x1="-15.24" y1="124.46" x2="-17.78" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
@@ -18874,6 +18886,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="0" y1="119.38" x2="0" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="S2" gate="1" pin="P1"/>
 <wire x1="0" y1="124.46" x2="2.54" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="C16" gate="G$1" pin="2"/>
+<wire x1="2.54" y1="124.46" x2="5.08" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC3" gate="G$1" pin="GND@1"/>
@@ -18941,6 +18955,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="-20.32" y1="88.9" x2="-20.32" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="S3" gate="1" pin="P1"/>
 <wire x1="-20.32" y1="93.98" x2="-17.78" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="C13" gate="G$1" pin="2"/>
+<wire x1="-17.78" y1="93.98" x2="-15.24" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND10" gate="1" pin="GND"/>
@@ -18948,6 +18964,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="0" y1="88.9" x2="0" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="S4" gate="1" pin="P1"/>
 <wire x1="0" y1="93.98" x2="2.54" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="C14" gate="G$1" pin="2"/>
+<wire x1="2.54" y1="93.98" x2="5.08" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND17" gate="1" pin="GND"/>
@@ -18955,6 +18973,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="17.78" y1="88.9" x2="17.78" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="S5" gate="1" pin="P1"/>
 <wire x1="17.78" y1="93.98" x2="20.32" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="C15" gate="G$1" pin="2"/>
+<wire x1="20.32" y1="93.98" x2="22.86" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R7" gate="G$1" pin="2"/>
@@ -19357,6 +19377,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="-20.32" y1="134.62" x2="-20.32" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="137.16" x2="-15.24" y2="137.16" width="0.1524" layer="91"/>
 <label x="-15.24" y="137.16" size="0.8128" layer="95" xref="yes"/>
+<pinref part="C17" gate="G$1" pin="1"/>
+<wire x1="-15.24" y1="132.08" x2="-15.24" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="A2"/>
@@ -19370,6 +19392,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="0" y1="134.62" x2="0" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="0" y1="137.16" x2="5.08" y2="137.16" width="0.1524" layer="91"/>
 <label x="5.08" y="137.16" size="0.8128" layer="95" xref="yes"/>
+<pinref part="C16" gate="G$1" pin="1"/>
+<wire x1="5.08" y1="132.08" x2="5.08" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="A3"/>
@@ -19408,6 +19432,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="-20.32" y1="104.14" x2="-20.32" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="106.68" x2="-15.24" y2="106.68" width="0.1524" layer="91"/>
 <label x="-15.24" y="106.68" size="0.8128" layer="95" xref="yes"/>
+<pinref part="C13" gate="G$1" pin="1"/>
+<wire x1="-15.24" y1="101.6" x2="-15.24" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="BUTTON5" class="0">
@@ -19421,6 +19447,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="17.78" y1="104.14" x2="17.78" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="106.68" x2="22.86" y2="106.68" width="0.1524" layer="91"/>
 <label x="22.86" y="106.68" size="0.8128" layer="95" xref="yes"/>
+<pinref part="C15" gate="G$1" pin="1"/>
+<wire x1="22.86" y1="101.6" x2="22.86" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="BUTTON4" class="0">
@@ -19434,6 +19462,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="0" y1="104.14" x2="0" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="0" y1="106.68" x2="5.08" y2="106.68" width="0.1524" layer="91"/>
 <label x="5.08" y="106.68" size="0.8128" layer="95" xref="yes"/>
+<pinref part="C14" gate="G$1" pin="1"/>
+<wire x1="5.08" y1="101.6" x2="5.08" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PTT_SW" class="0">
