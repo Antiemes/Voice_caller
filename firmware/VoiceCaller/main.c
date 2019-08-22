@@ -64,6 +64,8 @@ volatile uint8_t pttOn=0;
 volatile uint16_t debounce1=0, debounce2=0;
 uint8_t inhibit1=0, inhibit2=0;
 
+uint8_t micPTTCounter=0;
+
 typedef enum
 {
   STOPPED,
@@ -595,13 +597,24 @@ int main(void)
       //send_byte_hex(res >> 8);
       //send_byte_hex(res & 0xff);
       //send_lf();
-      if (res<21 && voiceState!=STOPPED)
+      if (res<21)
       {
-        //ledBlink(0);
-        voiceState=STOPPED;
-        relay(RELAY_RX);
-        ptt(0);
-        ledSet(0, 0);
+        if (micPTTCounter<7)
+        {
+          micPTTCounter++;
+        }
+        else if (voiceState!=STOPPED)
+        {
+          //ledBlink(0);
+          voiceState=STOPPED;
+          relay(RELAY_RX);
+          ptt(0);
+          ledSet(0, 0);
+        }
+      }
+      else
+      {
+        micPTTCounter=0;
       }
     }
   }
