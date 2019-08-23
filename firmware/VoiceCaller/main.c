@@ -592,18 +592,20 @@ int main(void)
     if (ADCDone())
     {
       uint16_t res;
+      static uint8_t c=0;
       res=ADCRes(); //Mic PTT: 10 (24 mV), our PTT: 33 (83 mV)
       ADCClear();
-      //send_byte_hex(res >> 8);
-      //send_byte_hex(res & 0xff);
-      //send_lf();
       if (res<21)
       {
-        if (micPTTCounter<7)
+        if (c<255)
+        {
+          c++;
+        }
+        if (micPTTCounter<255)
         {
           micPTTCounter++;
         }
-        else if (voiceState!=STOPPED)
+        if (micPTTCounter>32 && voiceState!=STOPPED) //40 is stable, 24 is not enough // 7 was okay for IC-703
         {
           //ledBlink(0);
           voiceState=STOPPED;
@@ -614,8 +616,16 @@ int main(void)
       }
       else
       {
+        if (c>0)
+        {
+          //send_byte_hex(c);
+          //send_lf();
+        }
+        c=0;
         micPTTCounter=0;
       }
+      
+
     }
   }
 }
