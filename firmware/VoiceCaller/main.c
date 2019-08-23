@@ -48,6 +48,7 @@ static FILE USBSerialStream;
 uint8_t samples=4;
 uint32_t sampleStart[]={0, 380250, 696041, 0x100000};
 uint32_t sampleLength[]={380250, 315791, 186131, 320993};
+uint32_t waitMillis[]={5000, 5000, 5000, 5000};
 uint16_t ledPattern[]={0x8000, 0xA000, 0xA800, 0xEA00};
 uint8_t sampleNum=0;
 uint32_t waitCycles=0;
@@ -664,7 +665,7 @@ ISR(TIMER0_COMPA_vect) //64 kHz
       {
         seekToTrack(sampleNum);
         newState=WAITING;
-        waitCycles=120000;
+        waitCycles=waitMillis[sampleNum]*32;
         ptt(0);
         ledSet(0, 0);
       }
