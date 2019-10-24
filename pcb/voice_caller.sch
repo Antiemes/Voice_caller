@@ -18687,8 +18687,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="GND23" library="supply1" deviceset="GND" device=""/>
 <part name="GND24" library="supply1" deviceset="GND" device=""/>
 <part name="GND25" library="supply1" deviceset="GND" device=""/>
-<part name="R15" library="rcl" deviceset="R-EU_" device="M1206" value="220"/>
-<part name="R16" library="rcl" deviceset="R-EU_" device="M1206" value="220"/>
+<part name="R15" library="rcl" deviceset="R-EU_" device="M1206" value="22k"/>
+<part name="R16" library="rcl" deviceset="R-EU_" device="M1206" value="220 x 100pF"/>
 <part name="C11" library="rcl" deviceset="CPOL-EU" device="E2.5-6"/>
 <part name="GND26" library="supply1" deviceset="GND" device=""/>
 <part name="C4" library="rcl" deviceset="CPOL-EU" device="E2.5-6"/>
