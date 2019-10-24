@@ -19136,6 +19136,16 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="147.32" y1="144.78" x2="147.32" y2="147.32" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="IC2" gate="G$1" pin="VS"/>
+<wire x1="-73.66" y1="127" x2="-73.66" y2="154.94" width="0.1524" layer="91"/>
+<pinref part="+8V1" gate="VCC" pin="VCC"/>
+<pinref part="C10" gate="G$1" pin="1"/>
+<wire x1="-73.66" y1="154.94" x2="-73.66" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="-68.58" y1="152.4" x2="-68.58" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="-68.58" y1="154.94" x2="-73.66" y2="154.94" width="0.1524" layer="91"/>
+<junction x="-73.66" y="154.94"/>
+</segment>
 </net>
 <net name="FREQ_UD" class="0">
 <segment>
@@ -19545,18 +19555,6 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinref part="C8" gate="G$1" pin="-"/>
 <pinref part="SPK" gate="G$1" pin="2"/>
 <wire x1="-48.26" y1="119.38" x2="-40.64" y2="119.38" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="VCC" class="0">
-<segment>
-<pinref part="IC2" gate="G$1" pin="VS"/>
-<wire x1="-73.66" y1="127" x2="-73.66" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="+8V1" gate="VCC" pin="VCC"/>
-<pinref part="C10" gate="G$1" pin="1"/>
-<wire x1="-73.66" y1="154.94" x2="-73.66" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="-68.58" y1="152.4" x2="-68.58" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="-68.58" y1="154.94" x2="-73.66" y2="154.94" width="0.1524" layer="91"/>
-<junction x="-73.66" y="154.94"/>
 </segment>
 </net>
 <net name="N$2" class="0">
