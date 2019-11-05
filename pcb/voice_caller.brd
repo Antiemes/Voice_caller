@@ -1858,14 +1858,14 @@ design rules under a new name.</description>
 <attribute name="NAME" x="3.408696875" y="4.340028125" size="1.016" layer="25"/>
 <attribute name="VALUE" x="-1.036303125" y="2.727528125" size="1.016" layer="27"/>
 </element>
-<element name="CONN_MIC" library="con-tycoelectronics" package="RJ45-NO-SHIELD" value="RJ45-8L-B" x="2" y="20" smashed="yes" rot="R270">
+<element name="CONN_MIC_ICOM" library="con-tycoelectronics" package="RJ45-NO-SHIELD" value="RJ45-8L-B" x="2" y="20" smashed="yes" rot="R270">
 <attribute name="OC_NEWARK" value="52K4445" x="2" y="20" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="RJ45-8L-B" x="2" y="20" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="TYCO ELECTRONICS" x="2" y="20" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="OC_FARNELL" value="1279843" x="2" y="20" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="4.54" y="25.715" size="1.778" layer="27" rot="R270"/>
 </element>
-<element name="CONN_RADIO" library="con-tycoelectronics" package="RJ45-NO-SHIELD" value="RJ45-8L-B" x="2" y="-20" smashed="yes" rot="R270">
+<element name="CONN_RADIO_ICOM" library="con-tycoelectronics" package="RJ45-NO-SHIELD" value="RJ45-8L-B" x="2" y="-20" smashed="yes" rot="R270">
 <attribute name="OC_NEWARK" value="52K4445" x="2" y="-20" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="RJ45-8L-B" x="2" y="-20" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="TYCO ELECTRONICS" x="2" y="-20" size="1.778" layer="27" rot="R270" display="off"/>
@@ -2025,7 +2025,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="20.955" y="13.208" size="1.016" layer="26" rot="MR180"/>
 <attribute name="VALUE" x="20.6375" y="20.7645" size="1.27" layer="28" rot="MR180"/>
 </element>
-<element name="C8" library="rcl" package="E2,5-6" value="" x="29.21" y="25.4" smashed="yes" rot="R90">
+<element name="C8" library="rcl" package="E2,5-6" value="220uF" x="29.21" y="25.4" smashed="yes" rot="R90">
 <attribute name="NAME" x="25.2095" y="27.8765" size="1.016" layer="25" ratio="10"/>
 <attribute name="VALUE" x="31.877" y="28.067" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
@@ -2053,11 +2053,11 @@ design rules under a new name.</description>
 <attribute name="NAME" x="21.59" y="27.6225" size="1.016" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="17.4625" y="23.1775" size="1.27" layer="28" rot="MR90"/>
 </element>
-<element name="C11" library="rcl" package="E2,5-6" value="" x="32.385" y="6.6675" smashed="yes">
+<element name="C11" library="rcl" package="E2,5-6" value="220uF" x="32.385" y="6.6675" smashed="yes">
 <attribute name="NAME" x="31.242" y="10.0965" size="1.016" layer="25" ratio="10"/>
 <attribute name="VALUE" x="35.052" y="4.0005" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="C4" library="rcl" package="E2,5-6" value="" x="29.5275" y="14.9225" smashed="yes">
+<element name="C4" library="rcl" package="E2,5-6" value="10uF" x="29.5275" y="14.9225" smashed="yes">
 <attribute name="NAME" x="26.797" y="10.7315" size="1.016" layer="25" ratio="10"/>
 <attribute name="VALUE" x="32.1945" y="12.2555" size="1.27" layer="27" ratio="10"/>
 </element>
@@ -2093,6 +2093,18 @@ design rules under a new name.</description>
 <attribute name="NAME" x="41.8953125" y="7.3323375" size="1.016" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="39.04" y="12.0601625" size="1.016" layer="28" rot="MR180"/>
 </element>
+<element name="CONN_MIC_YAESU" library="con-tycoelectronics" package="RJ45-NO-SHIELD" value="RJ45-8L-B" x="-18.415" y="19.685" rot="R270">
+<attribute name="MPN" value="RJ45-8L-B" x="-18.415" y="19.685" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="TYCO ELECTRONICS" x="-18.415" y="19.685" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="OC_NEWARK" value="52K4445" x="-18.415" y="19.685" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="OC_FARNELL" value="1279843" x="-18.415" y="19.685" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="CONN_RADIO_YAESU" library="con-tycoelectronics" package="RJ45-NO-SHIELD" value="RJ45-8L-B" x="-17.78" y="-20.32" rot="R270">
+<attribute name="MPN" value="RJ45-8L-B" x="-17.78" y="-20.32" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="TYCO ELECTRONICS" x="-17.78" y="-20.32" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="OC_NEWARK" value="52K4445" x="-17.78" y="-20.32" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="OC_FARNELL" value="1279843" x="-17.78" y="-20.32" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
 </elements>
 <signals>
 <signal name="+5V">
@@ -2127,7 +2139,7 @@ design rules under a new name.</description>
 <contactref element="C1" pad="2"/>
 <contactref element="C2" pad="2"/>
 <contactref element="C3" pad="2"/>
-<contactref element="CONN_MIC" pad="7"/>
+<contactref element="CONN_MIC_ICOM" pad="7"/>
 <contactref element="ARDUINO" pad="23"/>
 <contactref element="ARDUINO" pad="3"/>
 <contactref element="ARDUINO" pad="4"/>
@@ -2136,7 +2148,7 @@ design rules under a new name.</description>
 <contactref element="S1" pad="3"/>
 <contactref element="S1" pad="4"/>
 <wire x1="6.88" y1="-7.545" x2="4.34" y2="-7.545" width="0.3048" layer="1"/>
-<contactref element="CONN_RADIO" pad="7"/>
+<contactref element="CONN_RADIO_ICOM" pad="7"/>
 <wire x1="4.1275" y1="-10.795" x2="3.571875" y2="-10.239375" width="0.3048" layer="16"/>
 <wire x1="3.571875" y1="-10.239375" x2="1.42875" y2="-10.239375" width="0.3048" layer="16"/>
 <wire x1="1.42875" y1="-10.239375" x2="0.555625" y2="-9.36625" width="0.3048" layer="16"/>
@@ -2321,6 +2333,10 @@ design rules under a new name.</description>
 <wire x1="13.335" y1="-24.765" x2="13.335" y2="-21.828125" width="0.3048" layer="16"/>
 <wire x1="5.4275" y1="-20.2525" x2="8.35" y2="-23.175" width="0.3048" layer="16"/>
 <wire x1="8.35" y1="-25.068125" x2="8.35" y2="-23.175" width="0.3048" layer="16"/>
+<contactref element="CONN_MIC_YAESU" pad="2"/>
+<contactref element="CONN_RADIO_YAESU" pad="2"/>
+<wire x1="0.555625" y1="-9.36625" x2="-8.89" y2="-17.145" width="0" layer="19" extent="16-16"/>
+<wire x1="-9.525" y1="22.86" x2="3.175" y2="10.715625" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MOSI">
 <contactref element="ARDUINO" pad="14"/>
@@ -2372,8 +2388,8 @@ design rules under a new name.</description>
 <wire x1="6.985" y1="-3.4925" x2="6.985" y2="1.905" width="0.3048" layer="16"/>
 </signal>
 <signal name="PTT">
-<contactref element="CONN_MIC" pad="4"/>
-<contactref element="CONN_RADIO" pad="4"/>
+<contactref element="CONN_MIC_ICOM" pad="4"/>
+<contactref element="CONN_RADIO_ICOM" pad="4"/>
 <wire x1="-2.54" y1="17.4625" x2="-2.54" y2="-10.16" width="0.3048" layer="1"/>
 <wire x1="-1.905" y1="-10.795" x2="2.8575" y2="-10.795" width="0.3048" layer="1"/>
 <wire x1="5.3975" y1="-13.335" x2="8.6025" y2="-13.335" width="0.3048" layer="1"/>
@@ -2403,10 +2419,14 @@ design rules under a new name.</description>
 <wire x1="8.6025" y1="-13.335" x2="9.596778125" y2="-14.329278125" width="0.3048" layer="1"/>
 <wire x1="9.596778125" y1="-14.329278125" x2="9.596778125" y2="-18.071778125" width="0.3048" layer="1"/>
 <wire x1="9.596778125" y1="-18.071778125" x2="10.89" y2="-19.365" width="0.3048" layer="1"/>
+<contactref element="CONN_MIC_YAESU" pad="3"/>
+<contactref element="CONN_RADIO_YAESU" pad="3"/>
+<wire x1="-2.54" y1="-10.16" x2="-11.43" y2="-18.415" width="0" layer="19" extent="1-1"/>
+<wire x1="-12.065" y1="21.59" x2="-2.54" y2="17.4625" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+8V">
-<contactref element="CONN_MIC" pad="1"/>
-<contactref element="CONN_RADIO" pad="1"/>
+<contactref element="CONN_MIC_ICOM" pad="1"/>
+<contactref element="CONN_RADIO_ICOM" pad="1"/>
 <wire x1="-3.01625" y1="19.84375" x2="-3.01625" y2="-16.906875" width="0.3048" layer="16"/>
 <wire x1="-3.01625" y1="-16.906875" x2="-0.714375" y2="-19.20875" width="0.3048" layer="16"/>
 <via x="-0.714375" y="-19.20875" extent="1-16" drill="0.6" diameter="1.27"/>
@@ -2432,8 +2452,8 @@ design rules under a new name.</description>
 <wire x1="8.35" y1="24.445" x2="6.115" y2="22.225" width="0.3048" layer="16"/>
 </signal>
 <signal name="FREQ_UD">
-<contactref element="CONN_MIC" pad="2"/>
-<contactref element="CONN_RADIO" pad="2"/>
+<contactref element="CONN_MIC_ICOM" pad="2"/>
+<contactref element="CONN_RADIO_ICOM" pad="2"/>
 <via x="5.635625" y="-10.715625" extent="1-16" drill="0.6" diameter="1.27"/>
 <wire x1="5.635625" y1="10.715625" x2="5.635625" y2="5.318125" width="0.3048" layer="16"/>
 <wire x1="5.635625" y1="5.318125" x2="4.1275" y2="3.81" width="0.3048" layer="16"/>
@@ -2449,8 +2469,8 @@ design rules under a new name.</description>
 <wire x1="10.89" y1="-13.1125" x2="10.89" y2="-16.825" width="0.3048" layer="1"/>
 </signal>
 <signal name="SQUELCH">
-<contactref element="CONN_MIC" pad="8"/>
-<contactref element="CONN_RADIO" pad="8"/>
+<contactref element="CONN_MIC_ICOM" pad="8"/>
+<contactref element="CONN_RADIO_ICOM" pad="8"/>
 <wire x1="8.175625" y1="-11.985625" x2="8.175625" y2="10.16" width="0.3048" layer="16"/>
 <wire x1="8.175625" y1="10.16" x2="10.89" y2="12.874375" width="0.3048" layer="16"/>
 <wire x1="10.89" y1="12.874375" x2="10.89" y2="15.555" width="0.3048" layer="16"/>
@@ -2459,15 +2479,17 @@ design rules under a new name.</description>
 <wire x1="9.596778125" y1="-23.151778125" x2="10.89" y2="-24.445" width="0.3048" layer="16"/>
 </signal>
 <signal name="MIC_GND_RADIO">
-<contactref element="CONN_RADIO" pad="5"/>
+<contactref element="CONN_RADIO_ICOM" pad="5"/>
 <contactref element="RLY1" pad="3"/>
 <wire x1="8.35" y1="-20.635" x2="12.385" y2="-20.635" width="0.3048" layer="1"/>
 <wire x1="12.385" y1="-20.635" x2="13.731875" y2="-19.288125" width="0.3048" layer="1"/>
 <wire x1="13.731875" y1="-19.288125" x2="15.619375" y2="-19.288125" width="0.3048" layer="1"/>
+<contactref element="CONN_RADIO_YAESU" pad="5"/>
+<wire x1="8.35" y1="-20.635" x2="-11.43" y2="-20.955" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="AF_OUT">
-<contactref element="CONN_MIC" pad="3"/>
-<contactref element="CONN_RADIO" pad="3"/>
+<contactref element="CONN_MIC_ICOM" pad="3"/>
+<contactref element="CONN_RADIO_ICOM" pad="3"/>
 <wire x1="-1.666875" y1="-22.145625" x2="4.134375" y2="-22.145625" width="0.3048" layer="1"/>
 <wire x1="4.134375" y1="-22.145625" x2="8.35" y2="-18.095" width="0.3048" layer="1"/>
 <wire x1="-3.4925" y1="19.3675" x2="-3.4925" y2="-20.32" width="0.3048" layer="1"/>
@@ -2476,7 +2498,7 @@ design rules under a new name.</description>
 <wire x1="-0.955" y1="21.905" x2="8.35" y2="21.905" width="0.3048" layer="1"/>
 </signal>
 <signal name="MIC">
-<contactref element="CONN_MIC" pad="6"/>
+<contactref element="CONN_MIC_ICOM" pad="6"/>
 <contactref element="RLY1" pad="9"/>
 <wire x1="25.179375" y1="-16.748125" x2="23.909375" y2="-15.478125" width="0.4064" layer="1"/>
 <wire x1="23.909375" y1="-15.478125" x2="13.17625" y2="-15.478125" width="0.3048" layer="1"/>
@@ -2491,17 +2513,21 @@ design rules under a new name.</description>
 <wire x1="10.95375" y1="-10.63625" x2="10.715625" y2="-10.63625" width="0.3048" layer="1"/>
 <wire x1="12.7" y1="17.145" x2="11.75" y2="18.095" width="0.3048" layer="16"/>
 <wire x1="11.75" y1="18.095" x2="10.89" y2="18.095" width="0.3048" layer="16"/>
+<contactref element="CONN_MIC_YAESU" pad="4"/>
+<wire x1="10.89" y1="18.095" x2="-9.525" y2="20.32" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MIC_RADIO">
-<contactref element="CONN_RADIO" pad="6"/>
+<contactref element="CONN_RADIO_ICOM" pad="6"/>
 <contactref element="RLY1" pad="8"/>
 <wire x1="10.89" y1="-21.905" x2="12.448125" y2="-23.098125" width="0.3048" layer="1"/>
 <wire x1="12.448125" y1="-23.098125" x2="20.79625" y2="-23.098125" width="0.3048" layer="1"/>
 <wire x1="20.79625" y1="-23.098125" x2="24.60625" y2="-19.288125" width="0.3048" layer="1"/>
 <wire x1="24.60625" y1="-19.288125" x2="25.179375" y2="-19.288125" width="0.3048" layer="1"/>
+<contactref element="CONN_RADIO_YAESU" pad="4"/>
+<wire x1="10.89" y1="-21.905" x2="-8.89" y2="-19.685" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MIC_GND">
-<contactref element="CONN_MIC" pad="5"/>
+<contactref element="CONN_MIC_ICOM" pad="5"/>
 <contactref element="RLY1" pad="2"/>
 <via x="13.335" y="-16.748125" extent="1-16" drill="0.6" diameter="1.27"/>
 <wire x1="13.335" y1="-16.748125" x2="15.619375" y2="-16.748125" width="0.3048" layer="1"/>
@@ -2526,6 +2552,8 @@ design rules under a new name.</description>
 <wire x1="14.22051875" y1="20.955" x2="14.22051875" y2="21.613228125" width="0.3048" layer="1"/>
 <wire x1="13.255625" y1="-5.894375" x2="13.255625" y2="-16.66875" width="0.3048" layer="16"/>
 <wire x1="13.255625" y1="-16.66875" x2="13.335" y2="-16.748125" width="0.3048" layer="16"/>
+<contactref element="CONN_MIC_YAESU" pad="5"/>
+<wire x1="8.35" y1="19.365" x2="-12.065" y2="19.05" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MIC_PWM">
 <contactref element="R5" pad="2"/>
@@ -2850,6 +2878,26 @@ design rules under a new name.</description>
 <wire x1="24.4475" y1="27.6225" x2="25.0825" y2="26.9875" width="0.3048" layer="1"/>
 <wire x1="25.0825" y1="26.9875" x2="25.0825" y2="24.595" width="0.3048" layer="1"/>
 <wire x1="25.0825" y1="24.595" x2="25.23" y2="24.4475" width="0.4064" layer="1"/>
+</signal>
+<signal name="DOWN">
+<contactref element="CONN_MIC_YAESU" pad="8"/>
+<contactref element="CONN_RADIO_YAESU" pad="8"/>
+<wire x1="-9.525" y1="15.24" x2="-8.89" y2="-24.765" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="UP">
+<contactref element="CONN_MIC_YAESU" pad="7"/>
+<contactref element="CONN_RADIO_YAESU" pad="7"/>
+<wire x1="-12.065" y1="16.51" x2="-11.43" y2="-23.495" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="VCC_Y">
+<contactref element="CONN_MIC_YAESU" pad="6"/>
+<contactref element="CONN_RADIO_YAESU" pad="6"/>
+<wire x1="-9.525" y1="17.78" x2="-8.89" y2="-22.225" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="FAST">
+<contactref element="CONN_MIC_YAESU" pad="1"/>
+<contactref element="CONN_RADIO_YAESU" pad="1"/>
+<wire x1="-12.065" y1="24.13" x2="-11.43" y2="-15.875" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>
