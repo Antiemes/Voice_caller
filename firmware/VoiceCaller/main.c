@@ -45,11 +45,13 @@ USB_ClassInfo_CDC_Device_t VirtualSerial_CDC_Interface =
 
 static FILE USBSerialStream;
 
-uint8_t samples=4;
-uint32_t sampleStart[]={0, 380250, 696041, 0x100000};
-uint32_t sampleLength[]={380250, 315791, 186131, 320993};
-uint32_t waitMillis[]={5000, 5000, 5000, 5000};
-uint16_t ledPattern[]={0x8000, 0xA000, 0xA800, 0xEA00};
+uint8_t samples=6;
+uint32_t sampleStart[]={0, 380250, 696041, 882172, 1203165, 1203165+119160};
+//uint32_t sampleLength[]={380250, 315791, 186131, 320993, 274181};
+//uint32_t waitMillis[]={5000, 5000, 5000, 5000, 5000};
+uint32_t sampleLength[]={380250, 315791, 186131, 320993, 274181, 60339};
+uint32_t waitMillis[]={5000, 5000, 5000, 5000, 5000, 800};
+uint16_t ledPattern[]={0x8000, 0xA000, 0xA800, 0xEA00, 0xEE00, 0xEEE0};
 uint8_t sampleNum=0;
 uint32_t waitCycles=0;
 #define BUFSIZE 532
@@ -57,7 +59,7 @@ uint8_t buf[BUFSIZE];
 uint16_t bufpos=0;
 volatile uint16_t ledCounter=0;
 volatile uint16_t ADCCounter=0;
-volatile uint8_t ledFlag=0, ADCFlag=0;
+volatile uint8_t ledFlag=0, ADCFlag=0, ADCFlag2=0;
 const uint16_t ledTimeout=8192;
 const uint16_t ADCTimeout=256;
 volatile uint8_t pttOn=0;
@@ -489,6 +491,12 @@ int main(void)
             while(write_in_progress()); //TODO: Timeout.
             send_string("OK\n");
           }
+          else if (buf[0]=='U')
+          {
+            flash_unlock();
+            //while(write_in_progress()); //TODO: Timeout.
+            send_string("OK\n");
+          }
           else if (buf[0]=='s')
           {
             uint16_t i;
@@ -588,25 +596,25 @@ int main(void)
     }
     if (ADCFlag)
     {
+      ADCFlag=0; 
+      ADCFlag2=1; 
       ADCStart();
     }
-    if (ADCDone())
+    if (ADCFlag2 && ADCDone())
     {
+      ADCFlag2=0;
       uint16_t res;
-      static uint8_t c=0;
-      res=ADCRes(); //Mic PTT: 10 (24 mV), our PTT: 33 (83 mV)
+      res=ADCRes(); //Mic PTT: 10, our PTT: 25    OLD: --> Mic PTT: 10 (24 mV), our PTT: 33 (83 mV)
       ADCClear();
-      if (res<21)
+      //send_byte_hex(res);
+      //send_lf();
+      if (res<18)
       {
-        if (c<255)
-        {
-          c++;
-        }
         if (micPTTCounter<255)
         {
           micPTTCounter++;
         }
-        if (micPTTCounter>32 && voiceState!=STOPPED) //40 is stable, 24 is not enough // 7 was okay for IC-703
+        if (micPTTCounter>=9 && voiceState!=STOPPED) //A few tests showed 6, sometimes 7.
         {
           //ledBlink(0);
           voiceState=STOPPED;
@@ -617,16 +625,8 @@ int main(void)
       }
       else
       {
-        if (c>0)
-        {
-          //send_byte_hex(c);
-          //send_lf();
-        }
-        c=0;
         micPTTCounter=0;
       }
-      
-
     }
   }
 }
