@@ -19,4 +19,6 @@ void program_end(void);
 
 uint8_t write_in_progress(void);
 
+void flash_unlock();
+
 #endif
