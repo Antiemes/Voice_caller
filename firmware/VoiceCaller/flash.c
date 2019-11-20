@@ -1,5 +1,6 @@
 //Flash type: S25FL127SABMFI101 -  Flash Memory, NOR, 16 MB, 108 MHz, SPI, SOIC, 8 Pins 
 //Farnell order code: 2328002
+//SST26VF064B-104I/SM
 #include "spi.h"
 #include "flash.h"
 
