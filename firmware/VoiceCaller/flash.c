@@ -1,5 +1,6 @@
 //Flash type: S25FL127SABMFI101 -  Flash Memory, NOR, 16 MB, 108 MHz, SPI, SOIC, 8 Pins 
 //Farnell order code: 2328002
+//SST26VF064B-104I/SM
 #include "spi.h"
 #include "flash.h"
 
@@ -17,12 +18,24 @@ void erase_block(uint32_t addr)
 
   deselect_chip();
   select_chip();
-  spi_transmit_receive (0xd8);	//block erase (64k or 256k)
+  //spi_transmit_receive (0xd8);	//block erase (64k or 256k)
+  spi_transmit_receive (0x20);	//block erase (4k)
   spi_transmit_receive((addr >> 16) & 0xff);	//address msB
   spi_transmit_receive((addr >>  8) & 0xff);
   spi_transmit_receive( addr        & 0xff);	//address lsB
   deselect_chip();
   select_chip();
+}
+
+void flash_unlock()
+{
+  deselect_chip();
+  select_chip();
+  spi_transmit_receive(0x06);	//enable write
+  
+  deselect_chip();
+  select_chip();
+  spi_transmit_receive (0x98);	//Global Block Protection Unlock
 }
 
 void program_start(uint32_t addr)

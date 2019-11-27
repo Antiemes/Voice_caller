@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 import sys
 
-addr=0x100000
+addr=0x000000
 chunksize=128
-blocksize=65536
+blocksize=4096
 blockfree=0
 with open(sys.argv[1], "rb") as f:
     while True:

@@ -18616,8 +18616,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <parts>
 <part name="+8V" library="supply1" deviceset="VCC" device="" value="+8V"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
-<part name="CONN_MIC" library="con-tycoelectronics" deviceset="RJ45" device="" technology="-8L-B"/>
-<part name="CONN_RADIO" library="con-tycoelectronics" deviceset="RJ45" device="" technology="-8L-B"/>
+<part name="CONN_MIC_ICOM" library="con-tycoelectronics" deviceset="RJ45" device="" technology="-8L-B"/>
+<part name="CONN_RADIO_ICOM" library="con-tycoelectronics" deviceset="RJ45" device="" technology="-8L-B"/>
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="C1" library="rcl" deviceset="C-EU" device="C1206K" value="100nF"/>
@@ -18675,7 +18675,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="LED1" library="pinhead" deviceset="PINHD-1X2" device=""/>
 <part name="IC3" library="SparkFun-IC-Memory" deviceset="SPI_FLASH-X25XX" device="SMD1" value="25F32006WSOI"/>
 <part name="IC2" library="linear" deviceset="LM386?-*" device="M" technology="1"/>
-<part name="C8" library="rcl" deviceset="CPOL-EU" device="E2.5-6"/>
+<part name="C8" library="rcl" deviceset="CPOL-EU" device="E2.5-6" value="220uF"/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
 <part name="R14" library="rcl" deviceset="R-EU_" device="M1206" value="220"/>
 <part name="C9" library="rcl" deviceset="C-EU" device="C1206K" value="100nF"/>
@@ -18689,9 +18689,9 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="GND25" library="supply1" deviceset="GND" device=""/>
 <part name="R15" library="rcl" deviceset="R-EU_" device="M1206" value="22k"/>
 <part name="R16" library="rcl" deviceset="R-EU_" device="M1206" value="220 x 100pF"/>
-<part name="C11" library="rcl" deviceset="CPOL-EU" device="E2.5-6"/>
+<part name="C11" library="rcl" deviceset="CPOL-EU" device="E2.5-6" value="220uF"/>
 <part name="GND26" library="supply1" deviceset="GND" device=""/>
-<part name="C4" library="rcl" deviceset="CPOL-EU" device="E2.5-6"/>
+<part name="C4" library="rcl" deviceset="CPOL-EU" device="E2.5-6" value="10uF"/>
 <part name="R17" library="rcl" deviceset="R-EU_" device="M1206" value="10k"/>
 <part name="C12" library="rcl" deviceset="C-EU" device="C1206K" value="100nF"/>
 <part name="D1" library="diode" deviceset="DIODE-" device="SOD80C"/>
@@ -18701,6 +18701,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="C15" library="rcl" deviceset="C-EU" device="C1206K" value="10nF"/>
 <part name="C16" library="rcl" deviceset="C-EU" device="C1206K" value="10nF"/>
 <part name="C17" library="rcl" deviceset="C-EU" device="C1206K" value="10nF"/>
+<part name="CONN_MIC_YAESU" library="con-tycoelectronics" deviceset="RJ45" device="" technology="-8L-B"/>
+<part name="CONN_RADIO_YAESU" library="con-tycoelectronics" deviceset="RJ45" device="" technology="-8L-B"/>
 </parts>
 <sheets>
 <sheet>
@@ -18709,8 +18711,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <instances>
 <instance part="+8V" gate="VCC" x="147.32" y="149.86"/>
 <instance part="GND1" gate="1" x="147.32" y="132.08"/>
-<instance part="CONN_MIC" gate="G$1" x="-30.48" y="50.8" rot="MR0"/>
-<instance part="CONN_RADIO" gate="G$1" x="2.54" y="50.8"/>
+<instance part="CONN_MIC_ICOM" gate="G$1" x="-30.48" y="50.8" rot="MR0"/>
+<instance part="CONN_RADIO_ICOM" gate="G$1" x="2.54" y="50.8"/>
 <instance part="P+2" gate="1" x="78.74" y="157.48"/>
 <instance part="GND2" gate="1" x="78.74" y="139.7"/>
 <instance part="C1" gate="G$1" x="147.32" y="142.24"/>
@@ -18797,6 +18799,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <instance part="C15" gate="G$1" x="22.86" y="99.06"/>
 <instance part="C16" gate="G$1" x="5.08" y="129.54"/>
 <instance part="C17" gate="G$1" x="-15.24" y="129.54"/>
+<instance part="CONN_MIC_YAESU" gate="G$1" x="-30.48" y="17.78" rot="MR0"/>
+<instance part="CONN_RADIO_YAESU" gate="G$1" x="2.54" y="17.78"/>
 </instances>
 <busses>
 </busses>
@@ -18850,9 +18854,9 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="167.64" y1="134.62" x2="167.64" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="CONN_MIC" gate="G$1" pin="7"/>
+<pinref part="CONN_MIC_ICOM" gate="G$1" pin="7"/>
 <label x="10.16" y="43.18" size="0.8128" layer="95" xref="yes"/>
-<pinref part="CONN_RADIO" gate="G$1" pin="7"/>
+<pinref part="CONN_RADIO_ICOM" gate="G$1" pin="7"/>
 <wire x1="-27.94" y1="43.18" x2="0" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="0" y1="43.18" x2="10.16" y2="43.18" width="0.1524" layer="91"/>
 </segment>
@@ -19048,6 +19052,13 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="-81.28" y1="0" x2="-81.28" y2="2.54" width="0.1524" layer="91"/>
 <junction x="-81.28" y="2.54"/>
 </segment>
+<segment>
+<pinref part="CONN_MIC_YAESU" gate="G$1" pin="2"/>
+<pinref part="CONN_RADIO_YAESU" gate="G$1" pin="2"/>
+<wire x1="-27.94" y1="22.86" x2="0" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="0" y1="22.86" x2="10.16" y2="22.86" width="0.1524" layer="91"/>
+<label x="10.16" y="22.86" size="0.8128" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="MOSI" class="0">
 <segment>
@@ -19099,9 +19110,9 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 </net>
 <net name="PTT" class="0">
 <segment>
-<pinref part="CONN_MIC" gate="G$1" pin="4"/>
+<pinref part="CONN_MIC_ICOM" gate="G$1" pin="4"/>
 <wire x1="-27.94" y1="50.8" x2="0" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="CONN_RADIO" gate="G$1" pin="4"/>
+<pinref part="CONN_RADIO_ICOM" gate="G$1" pin="4"/>
 <wire x1="0" y1="50.8" x2="10.16" y2="50.8" width="0.1524" layer="91"/>
 <label x="10.16" y="50.8" size="0.8128" layer="95" xref="yes"/>
 </segment>
@@ -19117,12 +19128,19 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="-81.28" y1="30.48" x2="-83.82" y2="30.48" width="0.1524" layer="91"/>
 <label x="-83.82" y="30.48" size="0.8128" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="CONN_MIC_YAESU" gate="G$1" pin="3"/>
+<pinref part="CONN_RADIO_YAESU" gate="G$1" pin="3"/>
+<wire x1="-27.94" y1="20.32" x2="0" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="0" y1="20.32" x2="10.16" y2="20.32" width="0.1524" layer="91"/>
+<label x="10.16" y="20.32" size="0.8128" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="+8V" class="0">
 <segment>
-<pinref part="CONN_MIC" gate="G$1" pin="1"/>
+<pinref part="CONN_MIC_ICOM" gate="G$1" pin="1"/>
 <label x="10.16" y="58.42" size="0.8128" layer="95" xref="yes"/>
-<pinref part="CONN_RADIO" gate="G$1" pin="1"/>
+<pinref part="CONN_RADIO_ICOM" gate="G$1" pin="1"/>
 <wire x1="-27.94" y1="58.42" x2="0" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="0" y1="58.42" x2="10.16" y2="58.42" width="0.1524" layer="91"/>
 </segment>
@@ -19149,24 +19167,24 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 </net>
 <net name="FREQ_UD" class="0">
 <segment>
-<pinref part="CONN_MIC" gate="G$1" pin="2"/>
+<pinref part="CONN_MIC_ICOM" gate="G$1" pin="2"/>
 <label x="10.16" y="55.88" size="0.8128" layer="95" xref="yes"/>
-<pinref part="CONN_RADIO" gate="G$1" pin="2"/>
+<pinref part="CONN_RADIO_ICOM" gate="G$1" pin="2"/>
 <wire x1="-27.94" y1="55.88" x2="0" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="0" y1="55.88" x2="10.16" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SQUELCH" class="0">
 <segment>
-<pinref part="CONN_MIC" gate="G$1" pin="8"/>
-<pinref part="CONN_RADIO" gate="G$1" pin="8"/>
+<pinref part="CONN_MIC_ICOM" gate="G$1" pin="8"/>
+<pinref part="CONN_RADIO_ICOM" gate="G$1" pin="8"/>
 <wire x1="-27.94" y1="40.64" x2="0" y2="40.64" width="0.1524" layer="91"/>
 <label x="10.16" y="40.64" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="MIC_GND_RADIO" class="0">
 <segment>
-<pinref part="CONN_RADIO" gate="G$1" pin="5"/>
+<pinref part="CONN_RADIO_ICOM" gate="G$1" pin="5"/>
 <wire x1="0" y1="48.26" x2="-2.54" y2="48.26" width="0.1524" layer="91"/>
 <label x="-2.54" y="48.26" size="0.8128" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -19175,11 +19193,16 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="76.2" y1="7.62" x2="73.66" y2="7.62" width="0.1524" layer="91"/>
 <label x="73.66" y="7.62" size="0.8128" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="CONN_RADIO_YAESU" gate="G$1" pin="5"/>
+<wire x1="0" y1="15.24" x2="-2.54" y2="15.24" width="0.1524" layer="91"/>
+<label x="-2.54" y="15.24" size="0.8128" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="AF_OUT" class="0">
 <segment>
-<pinref part="CONN_MIC" gate="G$1" pin="3"/>
-<pinref part="CONN_RADIO" gate="G$1" pin="3"/>
+<pinref part="CONN_MIC_ICOM" gate="G$1" pin="3"/>
+<pinref part="CONN_RADIO_ICOM" gate="G$1" pin="3"/>
 <wire x1="-27.94" y1="53.34" x2="0" y2="53.34" width="0.1524" layer="91"/>
 <label x="10.16" y="53.34" size="0.8128" layer="95" xref="yes"/>
 <wire x1="0" y1="53.34" x2="10.16" y2="53.34" width="0.1524" layer="91"/>
@@ -19187,7 +19210,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 </net>
 <net name="MIC" class="0">
 <segment>
-<pinref part="CONN_MIC" gate="G$1" pin="6"/>
+<pinref part="CONN_MIC_ICOM" gate="G$1" pin="6"/>
 <wire x1="-27.94" y1="45.72" x2="-25.4" y2="45.72" width="0.1524" layer="91"/>
 <label x="-25.4" y="45.72" size="0.8128" layer="95" xref="yes"/>
 </segment>
@@ -19196,10 +19219,15 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="83.82" y1="20.32" x2="86.36" y2="20.32" width="0.1524" layer="91"/>
 <label x="86.36" y="20.32" size="0.8128" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="CONN_MIC_YAESU" gate="G$1" pin="4"/>
+<wire x1="-27.94" y1="17.78" x2="-25.4" y2="17.78" width="0.1524" layer="91"/>
+<label x="-25.4" y="17.78" size="0.8128" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="MIC_RADIO" class="0">
 <segment>
-<pinref part="CONN_RADIO" gate="G$1" pin="6"/>
+<pinref part="CONN_RADIO_ICOM" gate="G$1" pin="6"/>
 <wire x1="0" y1="45.72" x2="-2.54" y2="45.72" width="0.1524" layer="91"/>
 <label x="-2.54" y="45.72" size="0.8128" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -19208,10 +19236,15 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="76.2" y1="25.4" x2="73.66" y2="25.4" width="0.1524" layer="91"/>
 <label x="73.66" y="25.4" size="0.8128" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="CONN_RADIO_YAESU" gate="G$1" pin="4"/>
+<wire x1="0" y1="17.78" x2="-2.54" y2="17.78" width="0.1524" layer="91"/>
+<label x="-2.54" y="17.78" size="0.8128" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="MIC_GND" class="0">
 <segment>
-<pinref part="CONN_MIC" gate="G$1" pin="5"/>
+<pinref part="CONN_MIC_ICOM" gate="G$1" pin="5"/>
 <wire x1="-27.94" y1="48.26" x2="-25.4" y2="48.26" width="0.1524" layer="91"/>
 <label x="-25.4" y="48.26" size="0.8128" layer="95" xref="yes"/>
 </segment>
@@ -19219,6 +19252,11 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinref part="RLY1" gate="1" pin="O"/>
 <wire x1="83.82" y1="2.54" x2="86.36" y2="2.54" width="0.1524" layer="91"/>
 <label x="86.36" y="2.54" size="0.8128" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="CONN_MIC_YAESU" gate="G$1" pin="5"/>
+<wire x1="-27.94" y1="15.24" x2="-25.4" y2="15.24" width="0.1524" layer="91"/>
+<label x="-25.4" y="15.24" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="MIC_PWM" class="0">
@@ -19582,6 +19620,42 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinref part="T1" gate="G$1" pin="C"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="73.66" y1="71.12" x2="73.66" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="DOWN" class="0">
+<segment>
+<pinref part="CONN_MIC_YAESU" gate="G$1" pin="8"/>
+<pinref part="CONN_RADIO_YAESU" gate="G$1" pin="8"/>
+<wire x1="-27.94" y1="7.62" x2="0" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="0" y1="7.62" x2="10.16" y2="7.62" width="0.1524" layer="91"/>
+<label x="10.16" y="7.62" size="0.8128" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="UP" class="0">
+<segment>
+<pinref part="CONN_MIC_YAESU" gate="G$1" pin="7"/>
+<pinref part="CONN_RADIO_YAESU" gate="G$1" pin="7"/>
+<wire x1="-27.94" y1="10.16" x2="0" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="0" y1="10.16" x2="10.16" y2="10.16" width="0.1524" layer="91"/>
+<label x="10.16" y="10.16" size="0.8128" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="VCC_Y" class="0">
+<segment>
+<pinref part="CONN_MIC_YAESU" gate="G$1" pin="6"/>
+<pinref part="CONN_RADIO_YAESU" gate="G$1" pin="6"/>
+<wire x1="-27.94" y1="12.7" x2="0" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="0" y1="12.7" x2="10.16" y2="12.7" width="0.1524" layer="91"/>
+<label x="10.16" y="12.7" size="0.8128" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="FAST" class="0">
+<segment>
+<pinref part="CONN_MIC_YAESU" gate="G$1" pin="1"/>
+<pinref part="CONN_RADIO_YAESU" gate="G$1" pin="1"/>
+<wire x1="-27.94" y1="25.4" x2="0" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="0" y1="25.4" x2="10.16" y2="25.4" width="0.1524" layer="91"/>
+<label x="10.16" y="25.4" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
