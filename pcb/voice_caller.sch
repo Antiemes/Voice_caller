@@ -18635,7 +18635,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="R3" library="rcl" deviceset="R-EU_" device="M1206" value="3k3"/>
 <part name="C5" library="rcl" deviceset="C-EU" device="C1206K" value="10nF"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
-<part name="R4" library="rcl" deviceset="R-TRIMM" device="T93XB"/>
+<part name="R4" library="rcl" deviceset="R-TRIMM" device="T93XB" value="10k"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="C6" library="rcl" deviceset="C-EU" device="C1206K" value="100nF"/>
 <part name="R5" library="rcl" deviceset="R-EU_" device="M1206" value="4k7"/>
@@ -18675,7 +18675,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="LED1" library="pinhead" deviceset="PINHD-1X2" device=""/>
 <part name="IC3" library="SparkFun-IC-Memory" deviceset="SPI_FLASH-X25XX" device="SMD1" value="25F32006WSOI"/>
 <part name="IC2" library="linear" deviceset="LM386?-*" device="M" technology="1"/>
-<part name="C8" library="rcl" deviceset="CPOL-EU" device="E2.5-6" value="220uF"/>
+<part name="C8" library="rcl" deviceset="CPOL-EU" device="E2.5-6" value="470uF"/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
 <part name="R14" library="rcl" deviceset="R-EU_" device="M1206" value="220"/>
 <part name="C9" library="rcl" deviceset="C-EU" device="C1206K" value="100nF"/>
@@ -18689,7 +18689,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="GND25" library="supply1" deviceset="GND" device=""/>
 <part name="R15" library="rcl" deviceset="R-EU_" device="M1206" value="22k"/>
 <part name="R16" library="rcl" deviceset="R-EU_" device="M1206" value="220 x 100pF"/>
-<part name="C11" library="rcl" deviceset="CPOL-EU" device="E2.5-6" value="220uF"/>
+<part name="C11" library="rcl" deviceset="CPOL-EU" device="E2.5-6" value="100uF"/>
 <part name="GND26" library="supply1" deviceset="GND" device=""/>
 <part name="C4" library="rcl" deviceset="CPOL-EU" device="E2.5-6" value="10uF"/>
 <part name="R17" library="rcl" deviceset="R-EU_" device="M1206" value="10k"/>
