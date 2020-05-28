@@ -39,7 +39,7 @@ void erase_block(uint32_t addr)
   select_chip();
 }
 
-void flash_unlock()
+void flash_unlock(void)
 {
   deselect_chip();
   select_chip();
