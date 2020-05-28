@@ -285,7 +285,7 @@ void timerStop(void)
 void seekToTrack(uint8_t track)
 {
   initRead(sampleStart[track]);
-  sampleCounter=sampleLength[track];
+  setSampleCounter(sampleLength[track]);
 }
 
 //=====================================================================
@@ -661,7 +661,7 @@ ISR(TIMER0_COMPA_vect) //64 kHz
     if (voiceState==RUNNING)
     {
       OCR1B = readSample(); //read spi data and send to
-      if (sampleCounter==0)
+      if (getSampleCounter()==0)
       {
         seekToTrack(sampleNum);
         newState=WAITING;

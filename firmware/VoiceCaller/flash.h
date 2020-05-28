@@ -1,9 +1,11 @@
 #ifndef __FLASH_H_
 #define __FLASH_H_
 
-volatile uint32_t sampleCounter;
+void setSampleCounter(uint32_t c);
 
-uint8_t readSample(void );
+uint32_t getSampleCounter(void);
+
+uint8_t readSample(void);
 
 void erase_chip(void);
 

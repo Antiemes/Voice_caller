@@ -4,6 +4,18 @@
 #include "spi.h"
 #include "flash.h"
 
+volatile uint32_t sampleCounter;
+
+void setSampleCounter(uint32_t c)
+{
+	sampleCounter=c;
+}
+
+uint32_t getSampleCounter(void )
+{
+	return sampleCounter;
+}
+
 uint8_t readSample()
 {
   sampleCounter--;
