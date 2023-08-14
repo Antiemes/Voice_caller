@@ -52,12 +52,15 @@ module btn(x, y)
 }
 
 CLEARANCE = 0.2;
-PCB_LEN = 52.4	+ CLEARANCE*2;
+SPEAKER_DIA = 40;
+PCB_LEN = 52.4	+ CLEARANCE*2 + SPEAKER_DIA;
 PCB_W  = 31.9*2 + CLEARANCE*2;
 WALL_HEIGHT = 6.3+6;
 
 COLUMN_HEIGHT = 18.7;
 PAD = 2;
+
+SPEAKER_CENTER = PCB_LEN - SPEAKER_DIA / 2 - CLEARANCE - 2;
 
 difference()
 {
@@ -107,13 +110,13 @@ translate([0, -PCB_W/2, 0])
 		} 
 		
 		//speaker holes
-		#translate([4.7625 + 14, PCB_W/2 +15.5, -2])
-		rotate([0, 0, 45])
-		for(i=[-12:3:12])
-		{	 
-			translate([i-1.5/2, abs(i) - 13, 0])
-				cube([1.5, (13-abs(i))*2, 3]);
-		}
+		//#translate([4.7625 + 14, PCB_W/2 +15.5, -2])
+		//rotate([0, 0, 45])
+		//for(i=[-12:3:12])
+		//{	 
+		//	translate([i-1.5/2, abs(i) - 13, 0])
+		//		cube([1.5, (13-abs(i))*2, 3]);
+		//}
 		
 		for(i=[-19.95:9.975:19.95])
 		{
@@ -134,13 +137,41 @@ for(i=[-19.95:9.975:19.95])
 }
 
 // speaker
-translate([4.7625 + 14, 0+15.5, 0])
-difference()
-{	 
-	cylinder(d=30+CLEARANCE*2, h=2);
-	cylinder(d=28+CLEARANCE*2, h=4); 
-}
+//translate([4.7625 + 14, 0+15.5, 0])
+//difference()
+//{	 
+//	cylinder(d=30+CLEARANCE*2, h=2);
+//	cylinder(d=28+CLEARANCE*2, h=4); 
+//}
 
 }
+
+translate([SPEAKER_CENTER, 0, 0])
+{
+	for (a=[30:60:359])
+	{
+		rotate([0, 0, a]) translate([SPEAKER_DIA * .3, 0, 0]) cylinder(d=5, h=5, center=true);
+	}
+	for (a=[0:120:359])
+	{
+		rotate([0, 0, a]) translate([SPEAKER_DIA * .12, 0, 0]) cylinder(d=5, h=5, center=true);
+	}
+}
+
+
+}
+
+translate([SPEAKER_CENTER, 0, 0])
+{
+	difference()
+	{
+		cylinder(h=3, d=SPEAKER_DIA + 5);
+		cylinder(h=3, d=SPEAKER_DIA);
+		linear_extrude(height=3.5)
+		{
+			polygon(points=[[0, 0], [-SPEAKER_DIA*.6, -SPEAKER_DIA*.6], [-SPEAKER_DIA*.6, SPEAKER_DIA*.6]]);
+		}
+	}
+
 
 }
